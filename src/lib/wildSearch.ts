@@ -1,4 +1,4 @@
-import type { Property } from '@/lib/supabase';
+// import type { Property } from '@/lib/supabase';
 
 /**
  * "Wild" property search.
@@ -51,6 +51,16 @@ const CATEGORY_WORDS: Record<string, string> = {
   commercial: 'commercial office shop',
 };
 
+/** Any list-like value -> plain array (handles arrays, objects, JSON text and Postgres "{a,b}" text). */
+const toArray = (v: unknown): string[] => {
+  if (v === null || v === undefined || v === '') return [];
+  if (Array.isArray(v)) return v.filter(x => x !== null && x !== undefined).map(String);
+  if (typeof v === 'object') return Object.values(v as Record<string, unknown>).filter(x => x !== null && x !== undefined).map(String);
+  const s = String(v).trim();
+  if (s.startsWith('[')) { try { const j = JSON.parse(s); if (Array.isArray(j)) return j.map(String); } catch { /* fall through */ } }
+  return s.replace(/^[{[]|[}\]]$/g, '').split(',').map(x => x.replace(/^["'\s]+|["'\s]+$/g, '')).filter(Boolean);
+};
+
 const normalise = (s: string) =>
   s
     .toLowerCase()
@@ -74,7 +84,7 @@ export const buildHaystack = (p: Property): { text: string; primary: string; wor
     if (k === 'primary_category' || k === 'category_assignments') return;
     flatten(v, parts);
   });
-  const cats = [p.primary_category, ...(p.category_assignments || [])].filter(Boolean) as string[];
+  const cats = [p.primary_category, ...toArray(p.category_assignments)].filter(Boolean) as string[];
   cats.forEach(c => parts.push(CATEGORY_WORDS[c] || c.replace(/-/g, ' ')));
   if (p.is_jv) parts.push('jv joint venture');
   if (p.is_sale) parts.push('sale outright');
@@ -129,19 +139,22 @@ export const parseQuery = (query: string): Term[] => {
   return terms;
 };
 
-const editDistanceAtMost1 = (a: string, b: string): boolean => {
+/** true when a and b differ by at most `max` single-letter edits (insert / delete / replace) */
+const withinEdits = (a: string, b: string, max: number): boolean => {
   if (a === b) return true;
-  const la = a.length, lb = b.length;
-  if (Math.abs(la - lb) > 1) return false;
-  let i = 0, j = 0, edits = 0;
-  while (i < la && j < lb) {
-    if (a[i] === b[j]) { i++; j++; continue; }
-    if (++edits > 1) return false;
-    if (la > lb) i++;
-    else if (lb > la) j++;
-    else { i++; j++; }
+  if (Math.abs(a.length - b.length) > max) return false;
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    let rowMin = i;
+    for (let j = 1; j <= b.length; j++) {
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      rowMin = Math.min(rowMin, cur[j]);
+    }
+    if (rowMin > max) return false;
+    prev = cur;
   }
-  return edits + (la - i) + (lb - j) <= 1;
+  return prev[b.length] <= max;
 };
 
 const BHK_TOKEN = /^(\d+(?:\.\d+)?)bhk$/;
@@ -152,8 +165,10 @@ const termMatches = (term: Term, hay: { text: string; words: string[] }): { hit:
   if (BHK_TOKEN.test(term.plain)) return { hit: hay.words.includes(term.plain), fuzzy: false };
   if (hay.text.includes(term.plain)) return { hit: true, fuzzy: false };
   // typo tolerance for reasonably long words
+  // 4-6 letters: 1 letter off ("luxure" -> "luxury"); 7+ letters: up to 2 letters off
   if (term.plain.length >= 4 && !/\d/.test(term.plain)) {
-    if (hay.words.some(w => w.length >= 3 && editDistanceAtMost1(term.plain, w))) return { hit: true, fuzzy: true };
+    const max = term.plain.length >= 7 ? 2 : 1;
+    if (hay.words.some(w => w.length >= 3 && withinEdits(term.plain, w, max))) return { hit: true, fuzzy: true };
   }
   return { hit: false, fuzzy: false };
 };
@@ -161,7 +176,7 @@ const termMatches = (term: Term, hay: { text: string; words: string[] }): { hit:
 /** Configuration words of a property ("1bhk", "2bhk", "jodi") in order – first = main configuration. */
 const configWords = (p: Property): string[] => {
   const raw: unknown[] = [
-    ...(Array.isArray(p.bhk_options) ? p.bhk_options : []),
+    ...toArray(p.bhk_options),
     p.bhk,
     p.configuration_international,
   ];
@@ -172,7 +187,7 @@ const configWords = (p: Property): string[] => {
 };
 
 const inCategory = (p: Property, cat: string) =>
-  p.primary_category === cat || (p.category_assignments || []).includes(cat);
+  p.primary_category === cat || toArray(p.category_assignments).includes(cat);
 
 /** Filter + rank a list of properties for a wild-search query. */
 export const wildSearchProperties = (properties: Property[], query: string): Property[] => {
@@ -184,6 +199,11 @@ export const wildSearchProperties = (properties: Property[], query: string): Pro
   const terms = allTerms.filter(t => {
     if (t.negative || t.hasWildcard) return true;
     if (INTENT_WORDS[t.plain]) { intents.add(INTENT_WORDS[t.plain]); return false; }
+    // misspelled section word, e.g. "luxure" -> luxury, "hotl" -> hotel
+    if (t.plain.length >= 5 && !/\d/.test(t.plain)) {
+      const hit = Object.keys(INTENT_WORDS).find(k => k.length >= 5 && withinEdits(t.plain, k, 1));
+      if (hit) { intents.add(INTENT_WORDS[hit]); return false; }
+    }
     if (STOPWORDS.has(t.plain)) return false;
     return true;
   });
@@ -195,6 +215,7 @@ export const wildSearchProperties = (properties: Property[], query: string): Pro
   if (positives.length === 0 && intents.size === 0) return negatives.length ? properties.filter(p => !negatives.some(n => termMatches(n, buildHaystack(p)).hit)) : [...properties];
 
   const scored = properties.map(p => {
+   try {
     const hay = buildHaystack(p);
     if (negatives.some(n => termMatches(n, hay).hit)) return { p, score: -1, all: false, matched: 0, intent: false };
 
@@ -228,6 +249,10 @@ export const wildSearchProperties = (properties: Property[], query: string): Pro
     if (intents.size > 0 && p.primary_category && intents.has(p.primary_category)) score += 5;
 
     return { p, score, all: positives.length === 0 || matched === positives.length, matched, intent };
+   } catch (err) {
+    console.warn('Search skipped a property it could not read:', p?.id, err);
+    return { p, score: -1, all: false, matched: 0, intent: false };
+   }
   });
 
   let eligible = scored.filter(s => s.score >= 0);
@@ -236,6 +261,11 @@ export const wildSearchProperties = (properties: Property[], query: string): Pro
 
   const allMatch = eligible.filter(s => s.all).sort((a, b) => b.score - a.score);
   if (allMatch.length > 0) return allMatch.map(s => s.p);
+
+  // A section was asked for (e.g. "luxury") but nothing matches the other words too: show the section
+  if (intents.size > 0 && eligible.length > 0) {
+    return [...eligible].sort((a, b) => b.score - a.score).map(s => s.p);
+  }
 
   // Nothing matched every word – fall back to properties matching at least half of the words
   const need = Math.max(1, Math.ceil(positives.length / 2));
