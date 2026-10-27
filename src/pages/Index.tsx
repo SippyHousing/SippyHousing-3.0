@@ -44,7 +44,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="pt-20 lg:pt-24">
+      <main className="pt-20 lg:pt-20">
         <Hero />
       
         <JointVenture />

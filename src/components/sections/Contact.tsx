@@ -147,7 +147,7 @@ const Contact = () => {
                   <span className="text-sm">Call (General)</span>
                 </a>
                 <a 
-                  href="mailto:sippyhousing@gmail.com,sanjaysippy@sippyhousing.com"
+                  href="mailto:sippyhousing@gmail.com"
                   className="bg-white/10 hover:bg-white/20 transition-colors rounded-md p-4 flex flex-col items-center justify-center"
                 >
                   <Mail className="h-5 w-5 text-sippy-gold mb-2" />

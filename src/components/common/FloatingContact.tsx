@@ -19,13 +19,13 @@ const FloatingContact = () => {
             <Phone className="h-5 w-5" />
           </a>
           <a
-            href="mailto:sippyhousing@gmail.com,sanjaysippy@sippyhousing.com"
+            href="mailto:sippyhousing@gmail.com"
             className="bg-sippy-charcoal text-white rounded-full p-3 shadow-lg hover:bg-opacity-90 transition-all"
             title="Email Us"
           >
             <Mail className="h-5 w-5" />
           </a>
-          <a
+          {/* <a
             href="#contact"
             onClick={(e) => {
               e.preventDefault();
@@ -35,7 +35,16 @@ const FloatingContact = () => {
             title="Contact Form"
           >
             <MessageCircle className="h-5 w-5" />
-          </a>
+          </a> */}
+          <a
+  href="https://wa.me/7777030607?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20Sippy%20Housing."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-sippy-charcoal text-white rounded-full p-3 shadow-lg hover:bg-opacity-90 transition-all cursor-pointer flex items-center justify-center"
+  title="Chat on WhatsApp"
+>
+  <MessageCircle className="h-5 w-5" />
+</a>
         </div>
       )}
       
