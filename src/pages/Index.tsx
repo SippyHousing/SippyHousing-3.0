@@ -48,8 +48,8 @@ const Index = () => {
         <Hero />
       
         <JointVenture />
-        <NewProjects allProperties={allProperties} />
         <LuxuryHomes allProperties={allProperties} />
+        <NewProjects allProperties={allProperties} />
         <Apartments allProperties={allProperties} />
         <ResaleRent allProperties={allProperties} />
         <IndependentBuildings allProperties={allProperties} />
