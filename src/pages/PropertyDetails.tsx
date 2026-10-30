@@ -65,7 +65,7 @@
 
 //   const handleToggleFavorite = () => {
 //     if (!property) return;
-    
+
 //     if (isInCart(property.id)) {
 //       removeFromCart(property.id);
 //     } else {
@@ -1487,9 +1487,11 @@
 
 // export default PropertyDetails;
 
+import CurrencyIcon from "@/components/common/CurrencyIcon";
+import UnitPricingTable from "@/components/property/UnitPricingTable";
 
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, MapPin, Home, IndianRupee, Building, Calendar, Phone, Calendar as CalendarIcon, MessageCircle, Heart, HeartOff, Video, Play } from "lucide-react";
+import { ArrowLeft, MapPin, Home, IndianRupee, Building, Calendar, Phone, Mail, Calendar as CalendarIcon, MessageCircle, Heart, HeartOff, Video, Play } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { useEffect, useState } from "react";
@@ -1509,13 +1511,13 @@ const SESSION_KEY = "sippy_lead_captured";
 
 const PropertyDetails = () => {
   const location = useLocation();
-  const navigate  = useNavigate();
+  const navigate = useNavigate();
   const { id: paramId } = useParams();
 
   const stateProperty: Property | undefined = location.state?.property;
-  const [fullProperty,   setFullProperty]   = useState<Property | null>(null);
+  const [fullProperty, setFullProperty] = useState<Property | null>(null);
   const [propertyImages, setPropertyImages] = useState<PropertyImage[]>([]);
-  const [showLead,       setShowLead]       = useState(false);  // ← popup flag
+  const [showLead, setShowLead] = useState(false);  // ← popup flag
 
   const property: Property | undefined = fullProperty ?? stateProperty;
   const { addToCart, removeFromCart, isInCart } = useCart();
@@ -1594,16 +1596,26 @@ const PropertyDetails = () => {
     );
   }
 
-  const displayTitle          = property.header ?? (property as { title?: string }).title ?? "";
+
+
+
+  const displayTitle = property.header ?? (property as { title?: string }).title ?? "";
   const resolvedContactNumber = property.contact_number || getContactNumberByProperty(property);
-  const leadNumbers           = getLeadNumbersByProperty(property);
-  const configurationLabel    = getPropertyConfigurationLabel(property);
-  const fieldRemarkEntries    = Object.entries(property.field_remarks || {}).filter(([, v]) => !!String(v || "").trim());
+  const leadNumbers = getLeadNumbersByProperty(property);
+  //const configurationLabel    = getPropertyConfigurationLabel(property);
+  //
+  const configurationLabel =
+    getPropertyConfigurationLabel(property) ||
+    formatConfigurationList(property.configuration_international) ||
+    property.configuration_international ||
+    "";
+
+  const fieldRemarkEntries = Object.entries(property.field_remarks || {}).filter(([, v]) => !!String(v || "").trim());
   const fieldLabel = (key: string) => {
     const cat = getCategoryBySlug(property.primary_category || "");
     return cat?.fields.find(f => f.key === key)?.name || key.replace(/_/g, " ");
   };
-  const categoryLabel         =
+  const categoryLabel =
     getCategoryBySlug(property.primary_category || "")?.name ||
     property.primary_category || "Property";
 
@@ -1650,11 +1662,10 @@ const PropertyDetails = () => {
               <div className="flex items-center gap-3">
                 <button
                   onClick={handleToggleFavorite}
-                  className={`p-3 rounded-full transition-colors ${
-                    isInCart(property.id)
+                  className={`p-3 rounded-full transition-colors ${isInCart(property.id)
                       ? "bg-red-500 text-white hover:bg-red-600"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                  }`}
+                    }`}
                 >
                   {isInCart(property.id)
                     ? <Heart className="h-6 w-6 fill-current" />
@@ -1664,7 +1675,7 @@ const PropertyDetails = () => {
                   <div className="bg-sippy-gold text-white px-4 py-2 rounded-full">
                     {(property as { type?: string }).type === "premium" ? "Premium"
                       : (property as { type?: string }).type === "budget" ? "Budget"
-                      : property.usage_type || property.usage_type_category
+                        : property.usage_type || property.usage_type_category
                         || getCategoryBySlug(property.primary_category || "")?.name
                         || property.primary_category || "Property"}
                   </div>
@@ -1681,12 +1692,15 @@ const PropertyDetails = () => {
                 </div>
                 {(() => {
                   const priceStr = getPropertyPriceStr(property) || property.price || "";
-                  const inWords  = getPriceInWords(priceStr);
-                  const figures  = formatPriceWithCommas(priceStr);
-                  if (!inWords) return <p className="text-lg font-medium">{priceStr || "Price on request"}</p>;
+                  const inWords = getPriceInWords(priceStr);
+                  const figures = formatPriceWithCommas(priceStr);
+                  // if (!inWords) return <p className="text-lg font-medium">{priceStr || "Price on request"}</p>;
+                  if (!inWords) return <p className="text-lg font-medium">{priceStr || (property.unit_variants?.length ? "See unit-wise pricing below" : "Price on request")}</p>;
                   return (
                     <>
-                      <p className="text-lg font-medium">₹ {figures}</p>
+
+                      {/* <p className="text-lg font-medium">₹ {figures}</p> */}
+                      <p className="text-lg font-medium inline-flex items-center gap-1"><CurrencyIcon code={property.currency || "INR"} />{figures}</p>
                       <p className="text-sm text-gray-600 mt-1">({inWords})</p>
                     </>
                   );
@@ -1734,7 +1748,7 @@ const PropertyDetails = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-semibold mb-2">Project Details</h3>
-                  <ul className="space-y-2">
+                  {/* <ul className="space-y-2">
                     {property.builder && <li><span className="font-medium">Builder:</span> {property.builder}</li>}
                     {property.units != null && <li><span className="font-medium">Total Units:</span> {property.units}</li>}
                     {property.towers != null && <li><span className="font-medium">Number of Towers:</span> {property.towers}</li>}
@@ -1744,11 +1758,29 @@ const PropertyDetails = () => {
                     {!(property.builder || property.units != null || property.towers != null || property.acres != null || property.storey || property.society_property_name) && (
                       <li className="text-gray-500">—</li>
                     )}
+                  </ul> */}
+                  <ul className="space-y-2">
+                    {property.builder && <li><span className="font-medium">Builder:</span> {property.builder}</li>}
+                    {property.units != null && <li><span className="font-medium">Total Units:</span> {property.units}</li>}
+                    {property.towers != null && <li><span className="font-medium">Number of Towers:</span> {property.towers}</li>}
+                    {property.acres != null && <li><span className="font-medium">Land Area:</span> {property.acres} acres</li>}
+                    {property.storey && <li><span className="font-medium">Storey:</span> {property.storey}</li>}
+                    {property.society_property_name && <li><span className="font-medium">Society / Property:</span> {property.society_property_name}</li>}
+                    {/* international */}
+                    {property.country && <li><span className="font-medium">Country:</span> {property.country}</li>}
+                    {property.property_type_international && <li><span className="font-medium">Property Type:</span> {property.property_type_international}</li>}
+                    {property.transaction_type_international && <li><span className="font-medium">Transaction:</span> {property.transaction_type_international}</li>}
+                    {!(property.builder || property.units != null || property.towers != null || property.acres != null || property.storey || property.society_property_name
+                      || property.country || property.property_type_international || property.transaction_type_international) && (
+                        <li className="text-gray-500">—</li>
+                      )}
                   </ul>
+
+
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Unit Details</h3>
-                  <ul className="space-y-2">
+                  {/* <ul className="space-y-2">
                     {property.units != null && <li><span className="font-medium">Available Units:</span> {property.units}</li>}
                     {formatConfigurationList(property.bhk_options?.length ? property.bhk_options : property.bhk) && (
                       <li><span className="font-medium">Configurations:</span> {formatConfigurationList(property.bhk_options?.length ? property.bhk_options : property.bhk)}</li>
@@ -1760,7 +1792,35 @@ const PropertyDetails = () => {
                     {!(property.units != null || configurationLabel || property.size || property.area || property.flat_size || property.usage_type_category) && (
                       <li className="text-gray-500">—</li>
                     )}
+                  </ul> */}
+                  <ul className="space-y-2">
+                    {property.units != null && <li><span className="font-medium">Available Units:</span> {property.units}</li>}
+                    {formatConfigurationList(property.bhk_options?.length ? property.bhk_options : property.bhk) && (
+                      <li><span className="font-medium">Configurations:</span> {formatConfigurationList(property.bhk_options?.length ? property.bhk_options : property.bhk)}</li>
+                    )}
+                    {(property.size || property.area || property.flat_size) && (
+                      <li><span className="font-medium">Size Range:</span> {property.size || property.area || property.flat_size}</li>
+                    )}
+                    {property.usage_type_category && <li><span className="font-medium">Usage:</span> {property.usage_type_category}</li>}
+                    {/* international */}
+                    {property.configuration_international && (
+                      <li><span className="font-medium">Configuration:</span> {formatConfigurationList(property.configuration_international) || property.configuration_international}</li>
+                    )}
+                    {/* {property.currency && <li><span className="font-medium">Currency:</span> {property.currency}</li>} */}
+                    {property.currency && <li><span className="font-medium">Currency:</span> <span className="inline-flex items-center gap-1 align-middle"><CurrencyIcon code={property.currency} /> {property.currency}</span></li>}
+                    {(property as { price_international?: string }).price_international && (
+                      <li>
+                        <span className="font-medium">Price:</span>{" "}
+                        {property.currency ? `${property.currency} ` : ""}
+                        {formatPriceWithCommas((property as { price_international?: string }).price_international) || (property as { price_international?: string }).price_international}
+                      </li>
+                    )}
+                    {!(property.units != null || configurationLabel || property.size || property.area || property.flat_size || property.usage_type_category
+                      || property.configuration_international || property.currency || (property as { price_international?: string }).price_international) && (
+                        <li className="text-gray-500">—</li>
+                      )}
                   </ul>
+
                 </div>
               </div>
             </div>
@@ -1795,6 +1855,14 @@ const PropertyDetails = () => {
                       </a>
                     </div>
                   ))}
+                  {property.contact_email && (
+                    <a
+                      href={`mailto:${property.contact_email}`}
+                      className="mt-3 inline-flex items-center gap-2 font-medium text-sippy-charcoal hover:text-sippy-gold"
+                    >
+                      <Mail className="h-5 w-5 text-sippy-gold" /> {property.contact_email}
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -1857,16 +1925,16 @@ const PropertyDetails = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {property.primary_category === "luxury" && (
                     <>
-                      {property.view              && <div><span className="font-medium">View:</span> {property.view}</div>}
-                      {property.size              && <div><span className="font-medium">Size:</span> {property.size}</div>}
+                      {property.view && <div><span className="font-medium">View:</span> {property.view}</div>}
+                      {property.size && <div><span className="font-medium">Size:</span> {property.size}</div>}
                       {property.configuration_type && <div><span className="font-medium">Configuration:</span> {property.configuration_type}</div>}
                     </>
                   )}
                   {property.primary_category === "new-project" && (
                     <>
                       {formatConfigurationList(property.bhk_options) && <div><span className="font-medium">Available Configurations:</span> {formatConfigurationList(property.bhk_options)}</div>}
-                      {property.storey     && <div><span className="font-medium">Storey:</span> {property.storey}</div>}
-                      {property.area       && <div><span className="font-medium">Total Area:</span> {property.area}</div>}
+                      {property.storey && <div><span className="font-medium">Storey:</span> {property.storey}</div>}
+                      {property.area && <div><span className="font-medium">Total Area:</span> {property.area}</div>}
                       {property.possession && <div><span className="font-medium">Possession:</span> {property.possession}</div>}
                       {property.rera_number && <div><span className="font-medium">RERA Number:</span> {property.rera_number}</div>}
                       {property.unit_variants?.length > 0 ? (
@@ -1885,7 +1953,7 @@ const PropertyDetails = () => {
                                   <tr key={i} className="border-t">
                                     <td className="p-2">{v.type}</td>
                                     <td className="p-2">{v.label || "—"}</td>
-                                    <td className="p-2">{v.area  || "—"}</td>
+                                    <td className="p-2">{v.area || "—"}</td>
                                     <td className="p-2">{v.price ? `₹ ${formatPriceWithCommas(v.price) || v.price}` : "—"}</td>
                                   </tr>
                                 ))}
@@ -1895,11 +1963,11 @@ const PropertyDetails = () => {
                         </div>
                       ) : (
                         [
-                          { label: "1BHK",      area: property.bhk_1_area,     price: property.price_1bhk },
-                          { label: "2BHK",      area: property.bhk_2_area,     price: property.price_2bhk },
-                          { label: "3BHK",      area: property.bhk_3_area,     price: property.price_3bhk },
-                          { label: "4BHK",      area: property.bhk_4_area,     price: property.price_4bhk },
-                          { label: "5BHK",      area: property.bhk_5_area,     price: property.price_5bhk },
+                          { label: "1BHK", area: property.bhk_1_area, price: property.price_1bhk },
+                          { label: "2BHK", area: property.bhk_2_area, price: property.price_2bhk },
+                          { label: "3BHK", area: property.bhk_3_area, price: property.price_3bhk },
+                          { label: "4BHK", area: property.bhk_4_area, price: property.price_4bhk },
+                          { label: "5BHK", area: property.bhk_5_area, price: property.price_5bhk },
                           { label: "Penthouse", area: property.penthouse_area, price: property.price_penthouse },
                         ].filter(r => r.area || r.price).map(row => (
                           <div key={row.label}>
@@ -1915,26 +1983,26 @@ const PropertyDetails = () => {
                   )}
                   {property.primary_category === "resale-rental" && (
                     <>
-                      {property.property_type     && <div><span className="font-medium">Listing Type:</span> {property.property_type}</div>}
+                      {property.property_type && <div><span className="font-medium">Listing Type:</span> {property.property_type}</div>}
                       {property.furnishing_status && <div><span className="font-medium">Furnishing:</span> {property.furnishing_status}</div>}
-                      {property.floor_number      && <div><span className="font-medium">Floor:</span> {property.floor_number}</div>}
-                      {property.parking           && <div><span className="font-medium">Parking:</span> {property.parking}</div>}
+                      {property.floor_number && <div><span className="font-medium">Floor:</span> {property.floor_number}</div>}
+                      {property.parking && <div><span className="font-medium">Parking:</span> {property.parking}</div>}
                       {property.bathrooms != null && <div><span className="font-medium">Bathrooms:</span> {property.bathrooms}</div>}
-                      {property.age_of_property   && <div><span className="font-medium">Age of Property:</span> {property.age_of_property}</div>}
+                      {property.age_of_property && <div><span className="font-medium">Age of Property:</span> {property.age_of_property}</div>}
                       {property.property_type === "Rental" && property.price && <div><span className="font-medium">Monthly Rent:</span> ₹ {formatPriceWithCommas(property.price) || property.price}</div>}
                       {property.property_type === "Resale" && property.price && <div><span className="font-medium">Outright Price:</span> ₹ {formatPriceWithCommas(property.price) || property.price}</div>}
-                      {property.deposit           && <div><span className="font-medium">Security Deposit:</span> {property.deposit}</div>}
-                      {property.tenure            && <div><span className="font-medium">Lease Duration:</span> {property.tenure} {property.tenure_unit || ""}</div>}
-                      {property.maintenance       && <div><span className="font-medium">Maintenance:</span> {property.maintenance}</div>}
-                      {property.rera_number       && <div><span className="font-medium">RERA Number:</span> {property.rera_number}</div>}
+                      {property.deposit && <div><span className="font-medium">Security Deposit:</span> {property.deposit}</div>}
+                      {property.tenure && <div><span className="font-medium">Lease Duration:</span> {property.tenure} {property.tenure_unit || ""}</div>}
+                      {property.maintenance && <div><span className="font-medium">Maintenance:</span> {property.maintenance}</div>}
+                      {property.rera_number && <div><span className="font-medium">RERA Number:</span> {property.rera_number}</div>}
                     </>
                   )}
                   {property.primary_category === "plots-lands" && (
                     <>
-                      {property.plot_size           && <div><span className="font-medium">Plot Size:</span> {property.plot_size} {property.plot_size_unit || ""}</div>}
-                      {property.road_width          && <div><span className="font-medium">Road Width:</span> {property.road_width} {property.road_width_unit || ""}</div>}
+                      {property.plot_size && <div><span className="font-medium">Plot Size:</span> {property.plot_size} {property.plot_size_unit || ""}</div>}
+                      {property.road_width && <div><span className="font-medium">Road Width:</span> {property.road_width} {property.road_width_unit || ""}</div>}
                       {property.availability_status && <div><span className="font-medium">Status:</span> {property.availability_status}</div>}
-                      {property.sale_price          && <div><span className="font-medium">Sale Price:</span> ₹ {formatPriceWithCommas(property.sale_price) || property.sale_price}</div>}
+                      {property.sale_price && <div><span className="font-medium">Sale Price:</span> ₹ {formatPriceWithCommas(property.sale_price) || property.sale_price}</div>}
                       {property.is_jv && property.jv_terms_1 && (
                         <div className="md:col-span-2">
                           <span className="font-medium block mb-1">JV Terms – 1:</span>
@@ -1953,19 +2021,19 @@ const PropertyDetails = () => {
                     <>
                       {property.transaction_option && <div><span className="font-medium">Transaction:</span> {property.transaction_option}</div>}
                       {property.no_of_rooms != null && <div><span className="font-medium">Rooms:</span> {property.no_of_rooms}</div>}
-                      {property.floors != null      && <div><span className="font-medium">Floors:</span> {property.floors}</div>}
-                      {property.built_up_area       && <div><span className="font-medium">Built-up Area:</span> {property.built_up_area}</div>}
-                      {property.plot_size           && <div><span className="font-medium">Plot Size:</span> {property.plot_size}</div>}
+                      {property.floors != null && <div><span className="font-medium">Floors:</span> {property.floors}</div>}
+                      {property.built_up_area && <div><span className="font-medium">Built-up Area:</span> {property.built_up_area}</div>}
+                      {property.plot_size && <div><span className="font-medium">Plot Size:</span> {property.plot_size}</div>}
                       {property.transaction_option === "Sale" && property.sale_price && <div><span className="font-medium">Sale Price:</span> ₹ {formatPriceWithCommas(property.sale_price) || property.sale_price}</div>}
                       {property.transaction_option === "Rent" && property.rent && <div><span className="font-medium">Monthly Rent:</span> ₹ {formatPriceWithCommas(property.rent) || property.rent}</div>}
-                      {property.deposit             && <div><span className="font-medium">Deposit:</span> {property.deposit}</div>}
-                      {property.tenure              && <div><span className="font-medium">Tenure:</span> {property.tenure} {property.tenure_unit || ""}</div>}
-                      {property.operator_brand      && <div><span className="font-medium">Operator / Brand:</span> {property.operator_brand}</div>}
-                      {property.operating_price     && <div><span className="font-medium">Operating Price / Fee:</span> {property.operating_price}</div>}
+                      {property.deposit && <div><span className="font-medium">Deposit:</span> {property.deposit}</div>}
+                      {property.tenure && <div><span className="font-medium">Tenure:</span> {property.tenure} {property.tenure_unit || ""}</div>}
+                      {property.operator_brand && <div><span className="font-medium">Operator / Brand:</span> {property.operator_brand}</div>}
+                      {property.operating_price && <div><span className="font-medium">Operating Price / Fee:</span> {property.operating_price}</div>}
                       {property.transaction_option === "Pre-Leased" && property.pre_leased_sale_price && <div><span className="font-medium">Sale Price (Pre-Leased):</span> ₹ {formatPriceWithCommas(property.pre_leased_sale_price) || property.pre_leased_sale_price}</div>}
                       {property.transaction_option === "Pre-Leased" && property.pre_leased_rent_price && <div><span className="font-medium">Rent (Pre-Leased):</span> ₹ {formatPriceWithCommas(property.pre_leased_rent_price) || property.pre_leased_rent_price}</div>}
-                      {property.monthly_revenue     && <div><span className="font-medium">Monthly Revenue:</span> {property.monthly_revenue}</div>}
-                      {property.ebitda_yield        && <div><span className="font-medium">EBITDA / Yield:</span> {property.ebitda_yield}</div>}
+                      {property.monthly_revenue && <div><span className="font-medium">Monthly Revenue:</span> {property.monthly_revenue}</div>}
+                      {property.ebitda_yield && <div><span className="font-medium">EBITDA / Yield:</span> {property.ebitda_yield}</div>}
                       {property.operating_terms && (
                         <div className="md:col-span-2">
                           <span className="font-medium block mb-1">Operating Terms:</span>
@@ -1976,25 +2044,26 @@ const PropertyDetails = () => {
                   )}
                   {property.primary_category === "international" && (
                     <>
-                      {property.country                         && <div><span className="font-medium">Country:</span> {property.country}</div>}
-                      {property.currency                        && <div><span className="font-medium">Currency:</span> {property.currency}</div>}
-                      {property.transaction_type_international  && <div><span className="font-medium">Transaction:</span> {property.transaction_type_international}</div>}
-                      {property.property_type_international     && <div><span className="font-medium">Type:</span> {property.property_type_international}</div>}
-                      {property.configuration_international    && <div><span className="font-medium">Configuration:</span> {formatConfigurationList(property.configuration_international) || property.configuration_international}</div>}
+                      {property.country && <div><span className="font-medium">Country:</span> {property.country}</div>}
+                      {property.currency && <div><span className="font-medium">Currency:</span> {property.currency}</div>}
+                      {property.transaction_type_international && <div><span className="font-medium">Transaction:</span> {property.transaction_type_international}</div>}
+                      {property.property_type_international && <div><span className="font-medium">Type:</span> {property.property_type_international}</div>}
+                      {property.configuration_international && <div><span className="font-medium">Configuration:</span> {formatConfigurationList(property.configuration_international) || property.configuration_international}</div>}
                     </>
                   )}
                   {property.primary_category === "redevelopment-jv" && (
                     <>
-                      {property.society_property_name     && <div><span className="font-medium">Society / Property Name:</span> {property.society_property_name}</div>}
-                      {property.plot_size                 && <div><span className="font-medium">Plot Size:</span> {property.plot_size}</div>}
-                      {property.number_of_wings != null   && <div><span className="font-medium">Number of Wings:</span> {property.number_of_wings}</div>}
+                      {property.society_property_name && <div><span className="font-medium">Society / Property Name:</span> {property.society_property_name}</div>}
+                      {property.plot_size && <div><span className="font-medium">Plot Size:</span> {property.plot_size}</div>}
+                      {property.number_of_wings != null && <div><span className="font-medium">Number of Wings:</span> {property.number_of_wings}</div>}
                       {property.number_of_members != null && <div><span className="font-medium">Number of Members:</span> {property.number_of_members}</div>}
-                      {property.total_permissible_fsi     && <div><span className="font-medium">Total Permissible FSI:</span> {property.total_permissible_fsi}</div>}
-                      {property.fsi_consumed              && <div><span className="font-medium">FSI Consumed:</span> {property.fsi_consumed}</div>}
-                      {property.balance_fsi               && <div><span className="font-medium">Balance FSI:</span> {property.balance_fsi}</div>}
-                      {property.corpus_amount             && <div><span className="font-medium">Corpus Amount:</span> {property.corpus_amount} {property.corpus_amount_type ? `(${property.corpus_amount_type})` : ""}</div>}
-                      {property.rent                      && <div><span className="font-medium">Rent:</span> {property.rent}</div>}
-                      {property.stage                     && <div><span className="font-medium">Stage:</span> {property.stage}</div>}
+                      {property.total_permissible_fsi && <div><span className="font-medium">Total Permissible FSI:</span> {property.total_permissible_fsi}</div>}
+                      {property.fsi_consumed && <div><span className="font-medium">FSI Consumed:</span> {property.fsi_consumed}</div>}
+                      {property.balance_fsi && <div><span className="font-medium">Balance FSI:</span> {property.balance_fsi}</div>}
+                      {property.corpus_amount && <div><span className="font-medium">Corpus Amount:</span> {property.corpus_amount} {property.corpus_amount_type ? `(${property.corpus_amount_type})` : ""}</div>}
+                      {property.rent && <div><span className="font-medium">Rent:</span> {property.rent}</div>}
+                      {property.stage && <div><span className="font-medium">Stage:</span> {property.stage}</div>}
+
                       {property.existing_structure_details && (
                         <div className="md:col-span-2">
                           <span className="font-medium block mb-2">Existing Structure Details:</span>
@@ -2007,6 +2076,7 @@ const PropertyDetails = () => {
                           <p className="text-gray-600 whitespace-pre-wrap">{property.commercial_terms}</p>
                         </div>
                       )}
+                      <UnitPricingTable variants={property.unit_variants} currency={property.currency} />
                     </>
                   )}
                   {property.primary_category === "independent-buildings" && (
@@ -2021,8 +2091,8 @@ const PropertyDetails = () => {
                       {property.transaction_option && property.transaction_option !== "Pre-Leased" && property.price && (
                         <div><span className="font-medium">Price / Rent:</span> {property.price.startsWith("₹") ? property.price : `₹ ${formatPriceWithCommas(property.price) || property.price}`}</div>
                       )}
-                      {property.deposit    && <div><span className="font-medium">Deposit:</span> {property.deposit}</div>}
-                      {property.tenure     && <div><span className="font-medium">Tenure:</span> {property.tenure} {property.tenure_unit || ""}</div>}
+                      {property.deposit && <div><span className="font-medium">Deposit:</span> {property.deposit}</div>}
+                      {property.tenure && <div><span className="font-medium">Tenure:</span> {property.tenure} {property.tenure_unit || ""}</div>}
                       {property.escalation && <div><span className="font-medium">Escalation:</span> {property.escalation}</div>}
                     </>
                   )}

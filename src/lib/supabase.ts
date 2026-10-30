@@ -58,6 +58,8 @@ export interface Property {
   field_remarks?: Record<string, string>
   /** Extra numbers that should receive leads for this property (comma separated in the form) */
   lead_numbers?: string
+
+  contact_email?: string;
   /** Sales member handling this property; their direct number is `contact_number` */
   sales_person_name?: string
   /** Flashes in the homepage banner: 'Deal of the Month' | 'Deal of the Year' | 'None' */

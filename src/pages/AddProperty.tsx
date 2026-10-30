@@ -1,3 +1,4 @@
+import { INTERNATIONAL_UNIT_TYPES } from "@/config/international";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm, Control } from "react-hook-form";
@@ -12,11 +13,11 @@ import AdminLayout from "@/components/layout/AdminLayout";
 import { propertyService } from "@/services/propertyService";
 import { Property } from "@/lib/supabase";
 import ImageUpload from "@/components/ui/image-upload";
-import { 
-  ArrowLeft, 
-  Plus, 
-  Upload, 
-  FileText, 
+import {
+  ArrowLeft,
+  Plus,
+  Upload,
+  FileText,
   Loader2,
   Image as ImageIcon,
   Info
@@ -45,8 +46,8 @@ const createPropertySchema = () => {
     deal_highlight: z.string().optional(),
     field_remarks: z.record(z.string()).optional(),
     lead_numbers: z.string().optional(),
-    
-       // Admin only fields
+
+    // Admin only fields
     property_code: z.string().optional(),
     internal_building_name: z.string().optional(),
 
@@ -54,7 +55,7 @@ const createPropertySchema = () => {
     primary_category: z.string().optional(),
     category_assignments: z.array(z.string()).optional(),
     video_links: z.array(z.string()).optional(),
-    
+
     // Legacy fields (for backward compatibility)
     building: z.string().optional(),
     builder: z.string().optional(),
@@ -67,6 +68,7 @@ const createPropertySchema = () => {
     price_range: z.string().optional(),
     rera_number: z.string().optional(),
     contact_number: z.string().optional(),
+    contact_email: z.string().optional(),
     property_type: z.string().optional(),
     usage_type: z.string().optional(),
     additional_info: z.string().optional(),
@@ -98,7 +100,7 @@ const createPropertySchema = () => {
             baseSchema[field.key] = z.string().optional();
         }
       }
-      
+
       // Add unit fields if they exist
       if (field.unit && field.unitOptions) {
         baseSchema[field.unit] = z.string().optional();
@@ -176,7 +178,7 @@ const AddProperty = () => {
 
     try {
       setIsSubmitting(true);
-      
+
       // Prepare property data - include all fields
       const unitVariants = (data.unit_variants ?? []).filter(
         (v: { type?: string; price?: string }) => !!(v.type?.trim() || v.price?.trim())
@@ -264,15 +266,15 @@ const AddProperty = () => {
       const text = await csvFile.text();
       const lines = text.split('\n');
       const headers = lines[0].split(',').map(h => h.trim().toLowerCase());
-      
+
       const properties = [];
-      
+
       for (let i = 1; i < lines.length; i++) {
         if (!lines[i].trim()) continue;
-        
+
         const values = lines[i].split(',').map(v => v.trim());
         const property: Partial<Omit<Property, 'id' | 'created_at'>> = {};
-        
+
         headers.forEach((header, index) => {
           const value = values[index];
           switch (header) {
@@ -284,6 +286,7 @@ const AddProperty = () => {
             case 'price_range':
             case 'rera_number':
             case 'contact_number':
+            case 'contact_email':
             case 'property_type':
             case 'usage_type':
             case 'additional_info':
@@ -299,7 +302,7 @@ const AddProperty = () => {
               break;
           }
         });
-        
+
         if (property.building && property.builder && property.location && property.property_type && property.usage_type) {
           properties.push(property as Omit<Property, 'id' | 'created_at'>);
         }
@@ -335,21 +338,21 @@ const AddProperty = () => {
   return (
     <AdminLayout title="Add New Property">
       <div className="mb-6">
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           onClick={() => navigate("/admin")}
           className="mb-4"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Dashboard
         </Button>
-        
-        <div className="flex justify-between items-center">
+
+        {/* <div className="flex justify-between items-center">
           <div>
             <h2 className="text-2xl font-bold text-gray-900">Add New Property</h2>
             <p className="text-gray-600">Add a new property to your listings</p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
@@ -417,6 +420,10 @@ const AddProperty = () => {
                       <div className="mt-4">
                         <UnitVariantsInput control={control} />
                       </div>
+                    )}
+
+                    {primaryCategory === 'international' && (        // use the variable name your form already uses
+                      <UnitVariantsInput control={control} types={INTERNATIONAL_UNIT_TYPES} />
                     )}
                   </div>
 

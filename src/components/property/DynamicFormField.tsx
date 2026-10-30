@@ -1,3 +1,6 @@
+import CurrencyIcon from "@/components/common/CurrencyIcon";
+  import { CURRENCIES } from "@/config/international";
+
 import { Control, Controller, FieldValues, Path, useWatch } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -167,6 +170,33 @@ function DynamicFormFieldBody<T extends FieldValues>({
       );
 
     case 'select':
+       if (field.key === 'currency') {
+        return (
+          <div className="space-y-2">
+            <Label htmlFor={field.key}>{field.name}</Label>
+            <Controller
+              name={fieldName}
+              control={control}
+              render={({ field: c }) => (
+                <Select value={c.value || ''} onValueChange={c.onChange}>
+                  <SelectTrigger id={field.key}>
+                    <SelectValue placeholder={field.placeholder || 'Select currency'} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {CURRENCIES.map((cur) => (
+                      <SelectItem key={cur.code} value={cur.code}>
+                        <span className="inline-flex items-center gap-2">
+                          <CurrencyIcon code={cur.code} /> {cur.code} – {cur.name}
+                        </span>
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              )}
+            />
+          </div>
+        );
+      }
       return (
         <div className="space-y-2">
           <Label htmlFor={field.key}>{field.name}</Label>

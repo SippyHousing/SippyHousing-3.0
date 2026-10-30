@@ -116,6 +116,7 @@ export const COMMON_FIELDS: CategoryField[] = [
   placeholder: 'Direct number buyers will call, e.g. 9820053962',
   remark: false
 },
+{ key: 'contact_email', name: 'Email', type: 'text', placeholder: 'e.g. sales@example.com' },
 {
   key: 'lead_numbers',
   name: 'Lead Numbers (optional)',
