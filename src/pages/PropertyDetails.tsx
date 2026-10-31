@@ -1489,6 +1489,7 @@
 
 import CurrencyIcon from "@/components/common/CurrencyIcon";
 import UnitPricingTable from "@/components/property/UnitPricingTable";
+import ImageLightbox from "@/components/property/ImageLightbox";
 
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, MapPin, Home, IndianRupee, Building, Calendar, Phone, Mail, Calendar as CalendarIcon, MessageCircle, Heart, HeartOff, Video, Play } from "lucide-react";
@@ -1518,6 +1519,9 @@ const PropertyDetails = () => {
   const [fullProperty, setFullProperty] = useState<Property | null>(null);
   const [propertyImages, setPropertyImages] = useState<PropertyImage[]>([]);
   const [showLead, setShowLead] = useState(false);  // ← popup flag
+
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
 
   const property: Property | undefined = fullProperty ?? stateProperty;
   const { addToCart, removeFromCart, isInCart } = useCart();
@@ -1663,8 +1667,8 @@ const PropertyDetails = () => {
                 <button
                   onClick={handleToggleFavorite}
                   className={`p-3 rounded-full transition-colors ${isInCart(property.id)
-                      ? "bg-red-500 text-white hover:bg-red-600"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    ? "bg-red-500 text-white hover:bg-red-600"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                     }`}
                 >
                   {isInCart(property.id)
@@ -1908,8 +1912,18 @@ const PropertyDetails = () => {
                   {(property.video_links?.length ?? 0) > 0 ? "Photos & Videos" : "Photo Gallery"}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                  {propertyImages.map(img => (
+                  {/* {propertyImages.map(img => (
                     <div key={img.id} className="aspect-square overflow-hidden rounded-lg">
+                      <Watermark link={img.image_url} />
+                    </div>
+                  ))} */}
+
+                  {propertyImages.map((img, i) => (
+                    <div
+                      key={img.id}
+                      className="aspect-square overflow-hidden rounded-lg cursor-zoom-in"
+                      onClickCapture={(e) => { e.preventDefault(); e.stopPropagation(); setLightboxIndex(i); }}
+                    >
                       <Watermark link={img.image_url} />
                     </div>
                   ))}
@@ -1917,7 +1931,13 @@ const PropertyDetails = () => {
                 </div>
               </div>
             )}
-
+            {lightboxIndex !== null && (
+              <ImageLightbox
+                images={propertyImages.map((p) => p.image_url)}
+                startIndex={lightboxIndex}
+                onClose={() => setLightboxIndex(null)}
+              />
+            )}
             {/* Category-Specific Details */}
             {property.primary_category && (
               <div className="border-t pt-8 mt-8">
