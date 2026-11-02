@@ -885,7 +885,7 @@ const POST = {
   author: "Sippy Housing",
   published_at: "2026-11-02",
   read_time: 9,
-  image: "/public/dubai-property-guide.png",
+  image: "/dubai-property-guide.png",
   tags: ["Dubai Property", "Property Investment", "Off-Plan", "Buyer Guide", "2026"],
   excerpt:
     "Dubai has become a popular destination for international property buyers and real estate investors. Its modern infrastructure, business opportunities, premium residential communities, and international connectivity attract people looking to purchase homes or explore investment opportunities.",
