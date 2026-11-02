@@ -514,6 +514,9 @@ const navItems: NavItem[] = [
   {
     label: "About Us",
     href: "/about"
+  }, {
+    label: "Blogs",
+    href: "/blog"
   }
 ];
 

@@ -153,7 +153,7 @@ const migratePropertyData = (property: Property): Partial<PropertyFormData> => {
     real_property_name: property.real_property_name || '',
     remarks: property.remarks || '',
     sales_person_name: property.sales_person_name || '',
-    builder: property.builder || '',
+    // builder: property.builder || '',
     deal_highlight: property.deal_highlight || 'None',
     field_remarks: property.field_remarks || {},
     lead_numbers: property.lead_numbers || '',

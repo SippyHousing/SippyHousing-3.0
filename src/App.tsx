@@ -126,6 +126,8 @@ import EditProperty from "./pages/EditProperty";
 import SearchResults from "./pages/SearchResults";
 import AllClients from "./pages/AllClients";
 import AboutUs from "./pages/AboutUs";
+import Blog from "./pages/Blog";
+import BlogPostPage from "./pages/BlogPost";
 import Favorites from "./pages/Favorites";
 import ProtectedRoute from "./components/common/ProtectedRoute";
 import ScrollToTop from "./components/common/ScrollToTop";
@@ -147,6 +149,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/property/:id" element={<PropertyDetails />} />
             <Route path="/property-details" element={<PropertyDetails />} />
