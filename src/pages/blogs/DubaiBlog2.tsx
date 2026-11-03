@@ -246,10 +246,10 @@ export default function BlogPost2() {
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <H2>Introduction</H2>
               <p>
-                <Link to="/properties" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> continues to attract international property buyers, investors and businesses because of its modern infrastructure, global connectivity and growing residential communities. The city offers a wide range of real estate options, from affordable apartments and family homes to luxury villas and commercial properties. However, changing market conditions, property prices and new project launches make it important to understand the market before making an investment decision.
+                <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> continues to attract international property buyers, investors and businesses because of its modern infrastructure, global connectivity and growing residential communities. The city offers a wide range of real estate options, from affordable apartments and family homes to luxury villas and commercial properties. However, changing market conditions, property prices and new project launches make it important to understand the market before making an investment decision.
               </p>
               <p>
-                The <Link to="/properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> sector in 2026 presents a market with both opportunities and important factors to consider. Recent transaction data shows that property prices and sales activity do not always move in the same direction. While some price indicators continue to show annual growth, transaction volumes have moderated compared with the previous 12-month period.
+                The <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> sector in 2026 presents a market with both opportunities and important factors to consider. Recent transaction data shows that property prices and sales activity do not always move in the same direction. While some price indicators continue to show annual growth, transaction volumes have moderated compared with the previous 12-month period.
               </p>
               <p>
                 This guide explores the latest market trends, property prices, investment opportunities and factors that may influence the future of the Dubai property sector.
@@ -258,7 +258,7 @@ export default function BlogPost2() {
               {/* 1 */}
               <H2>1. How Is the Dubai Real Estate Market Performing in 2026?</H2>
               <p>
-                The <Link to="/properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> market is showing signs of a more measured phase after strong activity in previous years. Buyers are becoming more selective, while investors are paying closer attention to location, rental demand, property quality and long-term value.
+                The <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> market is showing signs of a more measured phase after strong activity in previous years. Buyers are becoming more selective, while investors are paying closer attention to location, rental demand, property quality and long-term value.
               </p>
               <p>According to market data based on Dubai Land Department registered transactions, the 12 months leading up to 2 November 2026 recorded approximately:</p>
               
@@ -355,7 +355,7 @@ export default function BlogPost2() {
               {/* 5 */}
               <H2>5. What Does the 2026 Market Data Suggest About Future Growth?</H2>
               <p>
-                The <Link to="/properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai property market</Link> is influenced by several connected factors, including population growth, employment opportunities, international investment, infrastructure development and the supply of new homes.
+                The <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai property market</Link> is influenced by several connected factors, including population growth, employment opportunities, international investment, infrastructure development and the supply of new homes.
               </p>
               <p>The latest available market snapshot shows that off-plan transactions account for a substantial share of registered sales. At the same time, the moderation in transaction volume suggests that buyers should avoid assuming that previous growth rates will continue automatically.</p>
 
@@ -392,7 +392,7 @@ export default function BlogPost2() {
               {/* 6 */}
               <H2>6. What Is the Dubai Real Estate Market Forecast for the Coming Years?</H2>
               <p>
-                Any <Link to="/properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai market forecast</Link> should be treated as an outlook rather than a guaranteed prediction. Property prices and transaction activity can change due to economic conditions, new housing supply, interest rates, investor sentiment and government policies.
+                Any <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai market forecast</Link> should be treated as an outlook rather than a guaranteed prediction. Property prices and transaction activity can change due to economic conditions, new housing supply, interest rates, investor sentiment and government policies.
               </p>
               <p>A few factors are likely to remain important when evaluating the market:</p>
 
@@ -432,7 +432,7 @@ export default function BlogPost2() {
               {/* 8 */}
               <H2>8. Exploring Real Estate Opportunities Beyond Dubai</H2>
               <p>
-                Real estate investors often compare different cities and markets before deciding where to allocate their funds. While <Link to="/properties" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> offers international investment opportunities, Indian property markets also provide options for buyers interested in residential homes, premium properties and long-term real estate ownership.
+                Real estate investors often compare different cities and markets before deciding where to allocate their funds. While <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> offers international investment opportunities, Indian property markets also provide options for buyers interested in residential homes, premium properties and long-term real estate ownership.
               </p>
               <p>
                 For those researching opportunities in India, <Link to="/" className="text-sippy-gold underline hover:text-sippy-charcoal">Sippy Housing provides</Link> a starting point for exploring real estate options and property-related services. Its real estate focus includes residential and commercial properties, redevelopment opportunities and property consultancy.
@@ -442,7 +442,7 @@ export default function BlogPost2() {
               </p>
               <p>Comparing different markets requires attention to local regulations, ownership rules, taxes, financing conditions and expected returns. Investors should evaluate each location independently instead of assuming that the same strategy will work everywhere.</p>
               <p>
-                For buyers who want to keep track of properties they are considering, the <Link to="/favorites" className="text-sippy-gold underline hover:text-sippy-charcoal">Sippy Housing favourites section</Link> offers a place to review saved property choices.
+                For buyers who want to keep track of properties they are considering, the <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Sippy Housing favourites section</Link> offers a place to review saved property choices.
               </p>
 
               {/* 9 FAQs */}
@@ -462,7 +462,7 @@ export default function BlogPost2() {
                 The Dubai property sector in 2026 reflects a changing market where prices, transaction volumes and buyer preferences need to be understood together. While the latest data shows annual growth in the median price per square foot, lower transaction activity compared with the previous 12-month period highlights the importance of careful market research.
               </p>
               <p>
-                Anyone considering <Link to="/properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> should compare locations, review developer credentials, understand all purchase costs and evaluate realistic rental potential before investing. A well-informed approach can help buyers identify suitable opportunities while managing the risks associated with property ownership.
+                Anyone considering <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> should compare locations, review developer credentials, understand all purchase costs and evaluate realistic rental potential before investing. A well-informed approach can help buyers identify suitable opportunities while managing the risks associated with property ownership.
               </p>
 
               <div className="rounded-lg bg-gray-100 p-4 text-sm italic text-gray-600">
