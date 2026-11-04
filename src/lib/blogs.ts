@@ -93,6 +93,20 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-03T12:00:00Z",
     updated_at: null,
   },
+  // Blog 3 (New)
+  {
+    id: "3",
+    slug: "how-can-you-buy-property-in-dubai-a-step-by-step-process-for-2026",
+    title: "How Can You Buy Property in Dubai? A Step-by-Step Process for 2026",
+    excerpt: "A complete step-by-step guide to buying property in Dubai, covering budget planning, legal requirements, ownership options, and DLD registration for 2026.",
+    cover_image: "/blogimg3.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Dubai Property", "Step-by-Step", "Buyer Guide", "DLD Registration", "2026"],
+    read_time: 7,
+    published_at: "2026-11-04T10:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 
