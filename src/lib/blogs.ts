@@ -107,6 +107,20 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-04T10:00:00Z",
     updated_at: null,
   },
+  // Blog 4 (New)
+  {
+    id: "4",
+    slug: "how-can-indians-buy-property-in-dubai-from-india-a-complete-guide-for-2026",
+    title: "How Can Indians Buy Property in Dubai from India? A Complete Guide for 2026",
+    excerpt: "Buying a property in Dubai is an exciting opportunity for Indian buyers. Learn how Indian residents and NRIs can purchase property in Dubai, LRS remittance rules, documentation, and the complete buying process for 2026.",
+    cover_image: "/blogimg4.png",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Dubai Property", "Indian Investors", "LRS Remittance", "NRI Real Estate", "Buyer Guide", "2026"],
+    read_time: 9,
+    published_at: "2026-11-05T10:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 

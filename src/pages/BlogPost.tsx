@@ -1361,6 +1361,7 @@ import Footer from "@/components/layout/Footer";
 import BlogPost1 from "@/pages/blogs/DubaiBlog1";
 import BlogPost2 from "@/pages/blogs/DubaiBlog2";
 import BlogPost3 from "@/pages/blogs/DubaiBlog3";
+import BlogPost4 from "@/pages/blogs/DubaiBlog4";
 
 // 2. Map each slug from your blog.ts to its component!
 const BLOGS: Record<string, React.ComponentType> = {
@@ -1370,8 +1371,10 @@ const BLOGS: Record<string, React.ComponentType> = {
 
   // Blog 2
   "what-does-dubai-real-estate-look-like-in-2026-market-trends-prices-&-investment-outlook": BlogPost2,
-  //
+  //// Blog 3
   "how-can-you-buy-property-in-dubai-a-step-by-step-process-for-2026": BlogPost3,
+   //// Blog 4
+  "how-can-indians-buy-property-in-dubai-from-india-a-complete-guide-for-2026": BlogPost4,
 };
 
 export default function BlogPostPage() {
