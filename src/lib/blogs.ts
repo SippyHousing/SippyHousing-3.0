@@ -121,6 +121,48 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-05T10:00:00Z",
     updated_at: null,
   },
+   // Blog 5 (New)
+  {
+    id: "5",
+    slug: "off-plan-properties-in-dubai-is-it-worth-investing-in-2026",
+    title: "Off-Plan Properties in Dubai: Is It Worth Investing in 2026?",
+    excerpt: "Dubai's real estate market continues to attract buyers looking for modern homes and flexible payment plans. Discover whether investing in off-plan properties in Dubai is worth it in 2026, including payment structures, risks, and developer due diligence.",
+    cover_image: "/blogimg5.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Dubai Property", "Off-Plan", "Property Investment", "Payment Plans", "Buyer Guide", "2026"],
+    read_time: 7,
+    published_at: "2026-11-06T10:00:00Z",
+    updated_at: null,
+  },
+   // Blog 6 (New)
+  {
+    id: "6",
+    slug: "where-can-you-find-the-best-apartments-for-sale-in-dubai-a-guide-to-areas-prices-&-budgets",
+    title: "Where Can You Find the Best Apartments for Sale in Dubai? A Guide to Areas, Prices & Budgets",
+    excerpt: "Planning to purchase an apartment in Dubai? Explore top residential areas including Dubai Marina, Downtown, and JVC, price factors, budget planning, apartment types, and essential buyer tips.",
+    cover_image: "/blogimg6.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Dubai Apartments", "Apartments for Sale", "Dubai Marina", "Downtown Dubai", "JVC", "Buyer Guide", "2026"],
+    read_time: 8,
+    published_at: "2026-11-06T12:00:00Z",
+    updated_at: null,
+  },
+   // Blog 6 (New)
+  {
+    id: "7",
+    slug: "where-can-you-find-the-best-villas-for-sale-in-dubai-top-communities-for-families-and-investors",
+    title: "Where Can You Find the Best Villas for Sale in Dubai? Top Communities for Families & Investors",
+    excerpt: "Planning to purchase an Villas in Dubai? Explore top residential areas including Dubai Marina, Downtown, and JVC, price factors, budget planning, apartment types, and essential buyer tips.",
+    cover_image: "/blogimg7.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Dubai Villas", "Villas for Sale", "Dubai Hills Estate", "Arabian Ranches", "MBR City", "Buyer Guide", "2026"],
+    read_time: 8,
+    published_at: "2026-11-06T12:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 
