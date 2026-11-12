@@ -190,6 +190,19 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-11T10:00:00Z",
     updated_at: null,
   },
+    {
+    id: "10",
+    slug: "where-can-you-find-the-best-studio-apartments-in-dubai-prices-areas-investment-potential",
+    title: "Where Can You Find the Best Studio Apartments in Dubai? Prices, Areas & Investment Potential",
+    excerpt: "Looking for the best studio apartments for sale in Dubai? Explore top areas from affordable to premium, average prices, rental yield potential, and essential checklists for buyers.",
+    cover_image: "/blogimg10.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Dubai Real Estate", "Studio Apartments", "Dubai Studios", "Affordable Housing", "JVC", "Dubai Silicon Oasis", "2026"],
+    read_time: 8,
+    published_at: "2026-11-12T10:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 
