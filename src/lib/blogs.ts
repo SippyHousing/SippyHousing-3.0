@@ -163,6 +163,33 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-06T12:00:00Z",
     updated_at: null,
   },
+   {
+    id: "8",
+    slug: "why-are-indian-investors-choosing-dubai-for-property-investment",
+    title: "Why Are Indian Investors Choosing Dubai for Property Investment?",
+    excerpt: "Discover why Indian investors are actively choosing Dubai real estate. Explore portfolio diversification, high rental yields, top investment communities, LRS rules, and key buyer tips.",
+    cover_image: "/blogimg8.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Dubai Property", "Indian Investors", "Property Investment", "Dubai Real Estate", "LRS", "2026"],
+    read_time: 8,
+    published_at: "2026-11-10T10:00:00Z",
+    updated_at: null,
+  },
+    // Blog 9 (New)
+  {
+    id: "9",
+    slug: "rental-yield-in-dubai-which-areas-give-the-best-roi",
+    title: "Rental Yield in Dubai: Which Areas Give the Best ROI?",
+    excerpt: "Looking for the highest rental returns in Dubai real estate? Explore apartment and villa rental yields by community, gross vs net yield calculations, and essential investor ROI tips.",
+    cover_image: "/blogimg9.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Dubai Property", "Rental Yield", "Dubai ROI", "Property Investment", "JVC", "Dubai Marina", "2026"],
+    read_time: 8,
+    published_at: "2026-11-11T10:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 
