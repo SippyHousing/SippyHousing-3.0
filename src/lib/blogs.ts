@@ -146,7 +146,7 @@ const LOCAL_BLOGS: BlogPost[] = [
     author: "Sippy Housing",
     tags: ["Dubai Apartments", "Apartments for Sale", "Dubai Marina", "Downtown Dubai", "JVC", "Buyer Guide", "2026"],
     read_time: 8,
-    published_at: "2026-11-06T12:00:00Z",
+    published_at: "2026-11-07T12:00:00Z",
     updated_at: null,
   },
    // Blog 6 (New)
@@ -160,7 +160,7 @@ const LOCAL_BLOGS: BlogPost[] = [
     author: "Sippy Housing",
     tags: ["Dubai Villas", "Villas for Sale", "Dubai Hills Estate", "Arabian Ranches", "MBR City", "Buyer Guide", "2026"],
     read_time: 8,
-    published_at: "2026-11-06T12:00:00Z",
+    published_at: "2026-11-09T12:00:00Z",
     updated_at: null,
   },
    {
