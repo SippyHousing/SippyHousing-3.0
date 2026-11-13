@@ -149,7 +149,7 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-07T12:00:00Z",
     updated_at: null,
   },
-   // Blog 6 (New)
+   // Blog 7 (New)
   {
     id: "7",
     slug: "where-can-you-find-the-best-villas-for-sale-in-dubai-top-communities-for-families-and-investors",
@@ -163,6 +163,8 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-09T12:00:00Z",
     updated_at: null,
   },
+  
+   // Blog 8 (New)
    {
     id: "8",
     slug: "why-are-indian-investors-choosing-dubai-for-property-investment",
@@ -190,6 +192,8 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-11T10:00:00Z",
     updated_at: null,
   },
+  
+   // Blog 10 (New)
     {
     id: "10",
     slug: "where-can-you-find-the-best-studio-apartments-in-dubai-prices-areas-investment-potential",
@@ -201,6 +205,21 @@ const LOCAL_BLOGS: BlogPost[] = [
     tags: ["Dubai Real Estate", "Studio Apartments", "Dubai Studios", "Affordable Housing", "JVC", "Dubai Silicon Oasis", "2026"],
     read_time: 8,
     published_at: "2026-11-12T10:00:00Z",
+    updated_at: null,
+  },
+  
+   // Blog 11 (New)
+    {
+    id: "11",
+    slug: "off-plan-vs-ready-property-in-dubai-which-is-better-for-you",
+    title: "Off-Plan vs Ready Property in Dubai: Which Is Better for You?",
+    excerpt: "Comparing off-plan vs ready property in Dubai? Discover differences in payment plans, possession timelines, rental returns, secondary market pros, cost breakdowns, and checklists.",
+    cover_image: "/blogimg11.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Off-Plan Property", "Ready Property", "Dubai Real Estate", "Secondary Market", "Property Investment", "Payment Plans", "2026"],
+    read_time: 8,
+    published_at: "2026-11-13T10:00:00Z",
     updated_at: null,
   },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!

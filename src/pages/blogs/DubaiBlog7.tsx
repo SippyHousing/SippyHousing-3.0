@@ -13,7 +13,7 @@ const POST = {
   title: "Where Can You Find the Best Villas for Sale in Dubai? Top Communities for Families & Investors",
   category: "Dubai Real Estate",
   author: "Sippy Housing",
-  published_at: "2026-11-06",
+  published_at: "2026-11-09",
   read_time: 8,
   image: "/blogimg7.jpeg",
   tags: ["Dubai Villas", "Villas for Sale", "Dubai Hills Estate", "Arabian Ranches", "MBR City", "Buyer Guide", "2026"],

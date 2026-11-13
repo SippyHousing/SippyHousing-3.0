@@ -13,7 +13,7 @@ const POST = {
   title: "Why Are Indian Investors Choosing Dubai for Property Investment?",
   category: "Investment Guide",
   author: "Sippy Housing",
-  published_at: "2026-11-12",
+  published_at: "2026-11-10",
   read_time: 9,
   image: "/blogimg8.jpeg",
   tags: [

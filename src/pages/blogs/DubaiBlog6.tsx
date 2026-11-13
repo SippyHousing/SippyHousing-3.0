@@ -13,7 +13,7 @@ const POST = {
   title: "Where Can You Find the Best Apartments for Sale in Dubai? A Guide to Areas, Prices & Budgets",
   category: "Dubai Real Estate",
   author: "Sippy Housing",
-  published_at: "2026-11-06",
+  published_at: "2026-11-07",
   read_time: 8,
   image: "/blogimg6.jpeg",
   tags: ["Dubai Apartments", "Apartments for Sale", "Dubai Marina", "Downtown Dubai", "JVC", "Buyer Guide", "2026"],

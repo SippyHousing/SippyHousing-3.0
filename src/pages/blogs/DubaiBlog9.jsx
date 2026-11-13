@@ -13,7 +13,7 @@ const POST = {
   title: "Rental Yield in Dubai: Which Areas Give the Best ROI?",
   category: "Investment & ROI",
   author: "Sippy Housing",
-  published_at: "2026-11-12",
+  published_at: "2026-11-11",
   read_time: 8,
   image: "/blogimg9.jpeg",
   tags: [
