@@ -222,6 +222,20 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-13T10:00:00Z",
     updated_at: null,
   },
+    // Blog 12 (New)
+  {
+    id: "12",
+    slug: "how-do-dubai-off-plan-payment-plans-work-a-complete-guide-to-60-40-80-20-and-post-handover-options",
+    title: "How Do Dubai Off-Plan Payment Plans Work? A Complete Guide to 60/40, 80/20 and Post-Handover Options",
+    excerpt: "Confused by Dubai off-plan payment plans? Discover how 60/40, 80/20, post-handover, and 1% monthly structures work, with illustrative breakdowns, checklists, and additional cost factors.",
+    cover_image: "/blogimg12.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Off-Plan Payment Plans", "Dubai Off-Plan", "60/40 Payment Plan", "80/20 Payment Plan", "Post-Handover", "1% Monthly Plan", "2026"],
+    read_time: 8,
+    published_at: "2026-11-14T10:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 

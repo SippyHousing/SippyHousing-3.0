@@ -1369,6 +1369,7 @@ import BlogPost8 from "@/pages/blogs/DubaiBlog8"; // <-- Blog 5 added
 import BlogPost9 from "@/pages/blogs/DubaiBlog9"; // <-- Blog 5 added
 import BlogPost10 from "@/pages/blogs/DubaiBlog10"; // <-- Blog 5 added
 import BlogPost11 from "@/pages/blogs/DubaiBlog11"; // <-- Blog 5 added
+import BlogPost12 from "@/pages/blogs/DubaiBlog12"; // <-- Blog 5 added
 // 2. Map each slug from your blog.ts to its component!
 const BLOGS: Record<string, React.ComponentType> = {
   // Blog 1
@@ -1394,6 +1395,7 @@ const BLOGS: Record<string, React.ComponentType> = {
   "where-can-you-find-the-best-studio-apartments-in-dubai-prices-areas-investment-potential": BlogPost10,
 
   "off-plan-vs-ready-property-in-dubai-which-is-better-for-you": BlogPost11,
+  "how-do-dubai-off-plan-payment-plans-work-a-complete-guide-to-60-40-80-20-and-post-handover-options": BlogPost12,
 };
 
 export default function BlogPostPage() {
