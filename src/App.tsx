@@ -108,7 +108,7 @@ import Enquiries from "./pages/Enquiries";
 
 // export default App;
 
-
+// import EnquiryWidget from "./components/common/EnquiryWidget";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -146,7 +146,9 @@ const App = () => (
         <Sonner />
         <Router>
           <ScrollToTop />
+          {/* <EnquiryWidget /> */}
           <Routes>
+           
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/blog" element={<Blog />} />

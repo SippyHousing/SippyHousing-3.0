@@ -236,6 +236,20 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-14T10:00:00Z",
     updated_at: null,
   },
+    // Blog 13 (New)
+  {
+    id: "13",
+    slug: "can-you-get-a-dubai-golden-visa-through-property-investment-what-are-the-eligibility-rules-and-application-steps",
+    title: "Can You Get a Dubai Golden Visa Through Property Investment? What Are the Eligibility Rules and Application Steps?",
+    excerpt: "Learn how to qualify for a 10-year UAE Golden Visa through Dubai property investment. Discover the AED 2M minimum threshold, mortgage rules, required documents, and step-by-step application steps.",
+    cover_image: "/blogimg13.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Dubai Golden Visa", "Property Investment", "UAE Residency", "Dubai Real Estate", "DLD Golden Visa", "Mortgage Property", "Investor Visa", "2026"],
+    read_time: 8,
+    published_at: "2026-11-16T10:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 
