@@ -86,19 +86,23 @@ export default function ImageLightbox({ images, startIndex = 0, onClose, renderI
         )}
 
         <div className="flex max-h-full max-w-full items-center justify-center" onClick={(e) => e.stopPropagation()}>
-          {renderImage ? (
-            renderImage(images[index], index)
-          ) : (
-            <img
-              key={index}
-              src={images[index]}
-              alt={`Property image ${index + 1}`}
-              draggable={false}
-              className="max-h-[68vh] max-w-full select-none object-contain animate-fade-in sm:max-h-[76vh]"
-              
-            />
-            
-          )}
+             <div className="relative inline-flex max-h-full max-w-full items-center justify-center select-none">
+              <img
+                key={index}
+                src={images[index]}
+                alt={`Property image ${index + 1}`}
+                draggable={false}
+                className="max-h-[68vh] max-w-full select-none object-contain animate-fade-in sm:max-h-[76vh]"
+              />
+              {/* Centred watermark overlay on full screen / enlarged image */}
+              <img
+                src="/watermark.png"
+                alt="watermark"
+                draggable={false}
+                className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 max-w-[45%] opacity-35 select-none z-10"
+              />
+            </div>
+
         </div>
 
         {total > 1 && (
