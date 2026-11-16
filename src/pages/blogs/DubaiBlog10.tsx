@@ -322,7 +322,7 @@ export default function DubaiBlog10() {
                 Are you planning to purchase a compact home in Dubai or looking for a property that fits your investment budget? Dubai offers a wide range of residential options, from affordable studios in developing communities to premium apartments in well-known neighbourhoods. With modern facilities, convenient transport connections, and an active rental market, studio apartments attract first-time buyers, professionals, and property investors.
               </p>
               <p>
-                However, choosing the right property requires more than looking at its advertised price. Location, apartment size, building quality, service charges, rental demand, and future requirements can all influence your decision. If you are researching a <Link to="/#properties" className={linkClass}>studio apartment in dubai</Link>, this guide will help you understand average prices, popular locations, property features, and important buying considerations.
+                However, choosing the right property requires more than looking at its advertised price. Location, apartment size, building quality, service charges, rental demand, and future requirements can all influence your decision. If you are researching a <Link to="/#international" className={linkClass}>studio apartment in dubai</Link>, this guide will help you understand average prices, popular locations, property features, and important buying considerations.
               </p>
 
               {/* Quick Overview Card */}
@@ -425,7 +425,7 @@ export default function DubaiBlog10() {
                 The price of a studio depends on its location, floor area, building quality, furnishing, facilities, and whether it is ready or under construction. A studio in a premium neighbourhood may cost considerably more than a similar-sized unit in an affordable community.
               </p>
               <p>
-                When comparing a <Link to="/#properties" className={linkClass}>studio for sale dubai</Link>, check recent transactions and properties with similar specifications. An advertised price alone may not reflect the complete cost of purchasing and owning the unit.
+                When comparing a <Link to="/#international" className={linkClass}>studio for sale dubai</Link>, check recent transactions and properties with similar specifications. An advertised price alone may not reflect the complete cost of purchasing and owning the unit.
               </p>
 
               <H3>What Factors Influence Studio Apartment Prices?</H3>
@@ -540,7 +540,7 @@ export default function DubaiBlog10() {
               {/* SECTION: How to Choose */}
               <H2>How Can You Choose the Right Studio for Your Budget?</H2>
               <p>
-                The right property should match your financial capacity, location preferences, and long-term plans. Before you <Link to="/#properties" className={linkClass}>buy studio in dubai</Link>, consider the following steps:
+                The right property should match your financial capacity, location preferences, and long-term plans. Before you <Link to="/#international" className={linkClass}>buy studio in dubai</Link>, consider the following steps:
               </p>
               <UL
                 items={[
@@ -609,7 +609,7 @@ export default function DubaiBlog10() {
                 Dubai offers studio properties across different budgets, neighbourhoods, and residential developments. The best choice depends on your financial plans, preferred location, property condition, and expected ownership costs.
               </p>
               <p>
-                Before choosing a <Link to="/#properties" className={linkClass}>studio apartment in dubai</Link>, compare prices across communities, understand the additional expenses, and evaluate the property's suitability for your requirements. Whether you are looking for a compact home or exploring a <Link to="/#properties" className={linkClass}>studio for sale dubai</Link> for investment, careful research can help you make a better-informed decision.
+                Before choosing a <Link to="/#international" className={linkClass}>studio apartment in dubai</Link>, compare prices across communities, understand the additional expenses, and evaluate the property's suitability for your requirements. Whether you are looking for a compact home or exploring a <Link to="/#international" className={linkClass}>studio for sale dubai</Link> for investment, careful research can help you make a better-informed decision.
               </p>
               <p>
                 Explore <Link to="/" className={linkClass}>Sippy Housing</Link> to discover Dubai property opportunities and get assistance while comparing residential options.
@@ -647,13 +647,25 @@ export default function DubaiBlog10() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
+            {/* <div className="mt-8 flex flex-wrap gap-2">
               {POST.tags.map((t) => (
                 <span key={t} className="rounded-full border bg-white px-3 py-1 text-sm text-gray-600">
                   {t}
                 </span>
               ))}
-            </div>
+            </div> */}
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+  {/* <span className="mr-1 text-sm font-semibold text-gray-500">Tags:</span> */}
+  {POST.tags.map((t) => (
+    <Link
+      key={t}
+      to={`/blog?tag=${encodeURIComponent(t)}`}
+      className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1 text-sm font-medium text-gray-600 transition-all duration-200 hover:border-sippy-gold hover:bg-sippy-gold hover:text-white hover:shadow-sm"
+    >
+      {t}
+    </Link>
+  ))}
+</div>
 
             <div className="mt-10 rounded-xl bg-white p-6 text-center shadow">
               <p className="mb-3 font-semibold text-sippy-charcoal">Looking for compact &amp; high-yield studios?</p>

@@ -258,7 +258,7 @@ export default function BlogPost7() {
                 Are you planning to purchase a spacious family home or invest in a premium residential property in Dubai? The city offers a wide selection of villas, from modern townhouses in family-friendly communities to exclusive residences with private gardens, swimming pools, and luxury facilities. With well-planned neighbourhoods, schools, shopping destinations, and recreational spaces, Dubai has become an attractive location for families and property investors.
               </p>
               <p>
-                However, choosing the right villa requires careful planning. Location, property size, community facilities, purchase price, maintenance costs, and future requirements all play an important role. If you are exploring <Link to="/#properties" className={linkClass}>villas for sale in dubai</Link>, this guide will help you understand the popular communities, price considerations, property types, and important factors to check before making a purchase.
+                However, choosing the right villa requires careful planning. Location, property size, community facilities, purchase price, maintenance costs, and future requirements all play an important role. If you are exploring <Link to="/#international" className={linkClass}>villas for sale in dubai</Link>, this guide will help you understand the popular communities, price considerations, property types, and important factors to check before making a purchase.
               </p>
 
               {/* Quick Overview Card */}
@@ -350,7 +350,7 @@ export default function BlogPost7() {
                 Villa prices vary according to location, property size, number of bedrooms, plot area, building quality, and available facilities. A villa in an established premium community may have a very different price from a townhouse in an emerging residential development.
               </p>
               <p>
-                When comparing <Link to="/#properties" className={linkClass}>villas for sale in dubai</Link>, it is important to review similar properties in the same community instead of relying on general market averages.
+                When comparing <Link to="/#international" className={linkClass}>villas for sale in dubai</Link>, it is important to review similar properties in the same community instead of relying on general market averages.
               </p>
 
               <H3>What Do Recent Dubai Villa Market Figures Show?</H3>
@@ -427,7 +427,7 @@ export default function BlogPost7() {
               {/* SECTION: Checks */}
               <H2>What Should You Check Before Buying a Villa in Dubai?</H2>
               <p>
-                Before deciding to <Link to="/#properties" className={linkClass}>buy villa in dubai</Link>, verify the property's legal, financial, and physical details. A careful review can help you avoid unexpected costs and ownership issues.
+                Before deciding to <Link to="/#international" className={linkClass}>buy villa in dubai</Link>, verify the property's legal, financial, and physical details. A careful review can help you avoid unexpected costs and ownership issues.
               </p>
 
               <H3>Villa Buying Checklist: What Should You Verify?</H3>
@@ -490,7 +490,7 @@ export default function BlogPost7() {
                 ]}
               />
               <p>
-                Buyers interested in <Link to="/#properties" className={linkClass}>dubai villas</Link> should compare several communities and property configurations before making a final decision. A property that matches your needs and budget is often a better choice than one selected only because of its popularity.
+                Buyers interested in <Link to="/#international" className={linkClass}>dubai villas</Link> should compare several communities and property configurations before making a final decision. A property that matches your needs and budget is often a better choice than one selected only because of its popularity.
               </p>
 
               {/* SECTION: Mistakes */}
@@ -524,7 +524,7 @@ export default function BlogPost7() {
                 Dubai offers a variety of residential communities for families and investors, from established neighbourhoods to modern lifestyle developments. The right decision depends on your budget, preferred location, property requirements, and long-term objectives.
               </p>
               <p>
-                Before choosing among <Link to="/#properties" className={linkClass}>villas for sale in dubai</Link>, compare communities, inspect property details, understand additional expenses, and verify all ownership documents. Whether you are planning to <Link to="/#properties" className={linkClass}>buy villa in dubai</Link> for family living or exploring <Link to="/#properties" className={linkClass}>luxury villas dubai</Link> for investment, careful research can help you select a property that suits your requirements.
+                Before choosing among <Link to="/#international" className={linkClass}>villas for sale in dubai</Link>, compare communities, inspect property details, understand additional expenses, and verify all ownership documents. Whether you are planning to <Link to="/#international" className={linkClass}>buy villa in dubai</Link> for family living or exploring <Link to="/#international" className={linkClass}>luxury villas dubai</Link> for investment, careful research can help you select a property that suits your requirements.
               </p>
               <p>
                 Explore <Link to="/" className={linkClass}>Sippy Housing</Link> to discover Dubai real estate opportunities and get assistance while evaluating properties.
@@ -554,11 +554,23 @@ export default function BlogPost7() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
+            {/* <div className="mt-8 flex flex-wrap gap-2">
               {POST.tags.map((t) => (
                 <span key={t} className="rounded-full border bg-white px-3 py-1 text-sm text-gray-600">{t}</span>
               ))}
-            </div>
+            </div> */}
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+  {/* <span className="mr-1 text-sm font-semibold text-gray-500">Tags:</span> */}
+  {POST.tags.map((t) => (
+    <Link
+      key={t}
+      to={`/blog?tag=${encodeURIComponent(t)}`}
+      className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1 text-sm font-medium text-gray-600 transition-all duration-200 hover:border-sippy-gold hover:bg-sippy-gold hover:text-white hover:shadow-sm"
+    >
+      {t}
+    </Link>
+  ))}
+</div>
 
             <div className="mt-10 rounded-xl bg-white p-6 text-center shadow">
               <p className="mb-3 font-semibold text-sippy-charcoal">Looking for your next property?</p>

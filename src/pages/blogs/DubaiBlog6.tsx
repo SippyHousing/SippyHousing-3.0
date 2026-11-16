@@ -243,7 +243,7 @@ export default function BlogPost6() {
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <H2>Introduction</H2>
               <p>
-                Are you planning to purchase a property in <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> but unsure which location or apartment type would be right for you? Dubai offers a wide range of residential options, from budget-friendly studios to premium waterfront apartments. With modern infrastructure, well-developed communities, and excellent lifestyle facilities, the city attracts homebuyers and property investors from different parts of the world.
+                Are you planning to purchase a property in <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> but unsure which location or apartment type would be right for you? Dubai offers a wide range of residential options, from budget-friendly studios to premium waterfront apartments. With modern infrastructure, well-developed communities, and excellent lifestyle facilities, the city attracts homebuyers and property investors from different parts of the world.
               </p>
               <p>
                 However, choosing the right property requires more than comparing prices. You should understand the location, property size, available facilities, ownership costs, and your future requirements before making a decision. If you are exploring <Link to="/properties" className="text-sippy-gold underline hover:text-sippy-charcoal">apartments for sale in dubai</Link>, this guide will help you understand popular residential areas, property types, budget considerations, and important factors to check before purchasing.
@@ -332,7 +332,7 @@ export default function BlogPost6() {
               {/* SECTION: Pricing & Factors */}
               <H2>How Much Do Apartments in Dubai Cost?</H2>
               <p>
-                The price of an apartment in Dubai depends on several core variables. When researching <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">apartments for sale in dubai</Link>, compare units with similar specifications within the same development rather than broad citywide averages.
+                The price of an apartment in Dubai depends on several core variables. When researching <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">apartments for sale in dubai</Link>, compare units with similar specifications within the same development rather than broad citywide averages.
               </p>
 
               <Table
@@ -398,7 +398,7 @@ export default function BlogPost6() {
               {/* SECTION: Choose by Budget */}
               <H2>How Can You Choose the Right Apartment According to Your Budget?</H2>
               <p>
-                If you plan to <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">buy apartment in dubai</Link>, follow these structured steps:
+                If you plan to <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">buy apartment in dubai</Link>, follow these structured steps:
               </p>
               <UL items={[
                 <><strong>1. Set a realistic budget:</strong> Determine your exact cash availability, including the 7% to 8% additional closing costs.</>,
@@ -454,11 +454,23 @@ export default function BlogPost6() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
+            {/* <div className="mt-8 flex flex-wrap gap-2">
               {POST.tags.map((t) => (
                 <span key={t} className="rounded-full border bg-white px-3 py-1 text-sm text-gray-600">{t}</span>
               ))}
-            </div>
+            </div> */}
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+  {/* <span className="mr-1 text-sm font-semibold text-gray-500">Tags:</span> */}
+  {POST.tags.map((t) => (
+    <Link
+      key={t}
+      to={`/blog?tag=${encodeURIComponent(t)}`}
+      className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1 text-sm font-medium text-gray-600 transition-all duration-200 hover:border-sippy-gold hover:bg-sippy-gold hover:text-white hover:shadow-sm"
+    >
+      {t}
+    </Link>
+  ))}
+</div>
 
             <div className="mt-10 rounded-xl bg-white p-6 text-center shadow">
               <p className="mb-3 font-semibold text-sippy-charcoal">Looking for your next property?</p>

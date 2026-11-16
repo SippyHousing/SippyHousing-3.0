@@ -238,7 +238,7 @@ export default function BlogPost5() {
                 Dubai's real estate market continues to attract buyers and investors looking for modern homes, flexible payment options, and long-term investment opportunities. Among the available choices, off-plan developments have become an important part of the property market. These properties allow buyers to purchase a home before construction is completed, often with payment schedules linked to different construction stages.
               </p>
               <p>
-                But is investing in an under-construction property the right decision in 2026? Understanding the benefits, risks, payment structures, and developer reputation can help you make a more informed choice. This guide explains what buyers should consider before exploring <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">off plan properties in dubai</Link>.
+                But is investing in an under-construction property the right decision in 2026? Understanding the benefits, risks, payment structures, and developer reputation can help you make a more informed choice. This guide explains what buyers should consider before exploring <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">off plan properties in dubai</Link>.
               </p>
 
               {/* Quick Overview Card */}
@@ -261,7 +261,7 @@ export default function BlogPost5() {
                 Unlike ready properties, buyers do not receive immediate possession. Instead, they make payments according to the agreed schedule while construction progresses. This arrangement can provide more time to organise finances and plan for future ownership.
               </p>
               <p>
-                For buyers comparing <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">off plan dubai</Link> opportunities, it is important to understand the project's location, construction progress, payment conditions, and expected handover date before making a commitment.
+                For buyers comparing <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">off plan dubai</Link> opportunities, it is important to understand the project's location, construction progress, payment conditions, and expected handover date before making a commitment.
               </p>
 
               {/* SECTION: Why Buyers Interested */}
@@ -320,7 +320,7 @@ export default function BlogPost5() {
               </div>
 
               <p>
-                Before choosing <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">off plan investment dubai</Link> opportunities, calculate the total amount due at every stage. Also consider additional expenses such as registration charges, service charges, furnishing, and possible financing costs.
+                Before choosing <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">off plan investment dubai</Link> opportunities, calculate the total amount due at every stage. Also consider additional expenses such as registration charges, service charges, furnishing, and possible financing costs.
               </p>
 
               {/* SECTION: Off-Plan vs Ready */}
@@ -350,7 +350,7 @@ export default function BlogPost5() {
               {/* SECTION: Due Diligence */}
               <H2>What Should You Check Before Buying an Off-Plan Property?</H2>
               <p>
-                Before deciding to <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">buy off plan property</Link>, do not rely only on attractive project images or promotional offers. Review the following points carefully:
+                Before deciding to <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">buy off plan property</Link>, do not rely only on attractive project images or promotional offers. Review the following points carefully:
               </p>
               <UL items={[
                 <><strong>Developer Reputation:</strong> Check the developer's previous projects, delivery history, construction quality, and customer feedback. A reliable track record can help you assess project-related risks.</>,
@@ -404,7 +404,7 @@ export default function BlogPost5() {
                 </Link>.
               </p>
               <p>
-                When evaluating <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">off plan properties in dubai</Link>, compare the project's price with similar developments, study the area's future supply, and consider your investment timeline. A well-researched property may suit long-term plans, while an unsuitable project can create financial pressure.
+                When evaluating <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">off plan properties in dubai</Link>, compare the project's price with similar developments, study the area's future supply, and consider your investment timeline. A well-researched property may suit long-term plans, while an unsuitable project can create financial pressure.
               </p>
 
               {/* FAQs */}
@@ -424,18 +424,30 @@ export default function BlogPost5() {
                 Off-plan real estate can be a useful option for buyers who want modern developments, staged payments, and a longer investment horizon. However, the decision should always involve careful research, financial planning, and verification of project details.
               </p>
               <p>
-                Whether you are considering <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">off plan investment dubai</Link> for personal use or long-term investment, focus on the developer's reputation, location, payment conditions, and realistic market expectations. Taking time to compare available opportunities can help you make a more confident property decision.
+                Whether you are considering <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">off plan investment dubai</Link> for personal use or long-term investment, focus on the developer's reputation, location, payment conditions, and realistic market expectations. Taking time to compare available opportunities can help you make a more confident property decision.
               </p>
               <p>
                 <Link to="/" className="text-sippy-gold underline hover:text-sippy-charcoal">Explore Sippy Housing</Link> to learn more about Dubai real estate opportunities and get guidance while evaluating properties that match your requirements.
               </p>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
+            {/* <div className="mt-8 flex flex-wrap gap-2">
               {POST.tags.map((t) => (
                 <span key={t} className="rounded-full border bg-white px-3 py-1 text-sm text-gray-600">{t}</span>
               ))}
-            </div>
+            </div> */}
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+  {/* <span className="mr-1 text-sm font-semibold text-gray-500">Tags:</span> */}
+  {POST.tags.map((t) => (
+    <Link
+      key={t}
+      to={`/blog?tag=${encodeURIComponent(t)}`}
+      className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1 text-sm font-medium text-gray-600 transition-all duration-200 hover:border-sippy-gold hover:bg-sippy-gold hover:text-white hover:shadow-sm"
+    >
+      {t}
+    </Link>
+  ))}
+</div>
 
             <div className="mt-10 rounded-xl bg-white p-6 text-center shadow">
               <p className="mb-3 font-semibold text-sippy-charcoal">Looking for your next property?</p>

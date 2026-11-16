@@ -318,7 +318,7 @@ export default function DubaiBlog11() {
                 Are you planning to invest in Dubai real estate but unsure whether to choose an off-plan property or a completed home? Both options offer different advantages, payment structures, timelines, and investment opportunities. The right choice depends on your budget, financial goals, preferred location, and how soon you want to use or earn from the property.
               </p>
               <p>
-                When comparing <Link to="/#properties" className={linkClass}>off plan vs ready property dubai</Link>, buyers should look beyond the advertised price. Factors such as construction timelines, developer reputation, rental income, resale potential, maintenance costs, and payment flexibility can significantly influence the overall investment decision.
+                When comparing <Link to="/#international" className={linkClass}>off plan vs ready property dubai</Link>, buyers should look beyond the advertised price. Factors such as construction timelines, developer reputation, rental income, resale potential, maintenance costs, and payment flexibility can significantly influence the overall investment decision.
               </p>
               <p>
                 Dubai offers a wide range of residential properties for international buyers, from newly launched apartments to completed villas and luxury residences. If you are exploring the market, <Link to="/" className={linkClass}>Sippy Housing</Link> can help you understand available property options and make a more informed decision.
@@ -336,7 +336,7 @@ export default function DubaiBlog11() {
                 <strong>Ready property</strong> is an already completed residential unit that can be inspected before purchase. It may be purchased directly from an existing owner or through the resale market. Depending on its occupancy status and transfer process, the buyer may be able to move in or rent it out soon after completing the transaction.
               </p>
               <p>
-                For buyers comparing <Link to="/#properties" className={linkClass}>off plan vs ready property dubai</Link>, the biggest difference is the time between purchase and possession.
+                For buyers comparing <Link to="/#international" className={linkClass}>off plan vs ready property dubai</Link>, the biggest difference is the time between purchase and possession.
               </p>
 
               {/* Quick Insight Box */}
@@ -426,7 +426,7 @@ export default function DubaiBlog11() {
                 A completed property can be suitable for buyers who prefer certainty, immediate access, and the ability to inspect the actual home before investing.
               </p>
               <p>
-                A <Link to="/#properties" className={linkClass}>ready to move property dubai</Link> option can be especially relevant for families planning relocation, professionals looking for accommodation, and investors interested in properties that may generate rental income sooner.
+                A <Link to="/#international" className={linkClass}>ready to move property dubai</Link> option can be especially relevant for families planning relocation, professionals looking for accommodation, and investors interested in properties that may generate rental income sooner.
               </p>
 
               <H3>1. Inspect the Actual Property</H3>
@@ -459,7 +459,7 @@ export default function DubaiBlog11() {
               {/* SECTION: Secondary Market */}
               <H2>How Does the Secondary Market in Dubai Work?</H2>
               <p>
-                The <Link to="/#properties" className={linkClass}>secondary market dubai</Link> refers to properties being resold by their existing owners rather than purchased directly from a developer as a new launch.
+                The <Link to="/#international" className={linkClass}>secondary market dubai</Link> refers to properties being resold by their existing owners rather than purchased directly from a developer as a new launch.
               </p>
               <p>
                 This market includes completed apartments, villas, and townhouses. It may also include certain off-plan units being resold through an approved assignment or resale process, subject to developer and regulatory requirements. For buyers, the secondary market offers an opportunity to compare actual properties across different communities and building types.
@@ -483,7 +483,7 @@ export default function DubaiBlog11() {
                 ))}
               </ul>
               <p>
-                A <Link to="/#properties" className={linkClass}>ready to move property dubai</Link> purchase through resale can offer a clearer picture of the property's current condition and surroundings. Still, buyers should complete legal and financial checks before signing any agreement.
+                A <Link to="/#international" className={linkClass}>ready to move property dubai</Link> purchase through resale can offer a clearer picture of the property's current condition and surroundings. Still, buyers should complete legal and financial checks before signing any agreement.
               </p>
 
               {/* SECTION: Which Option */}
@@ -596,7 +596,7 @@ export default function DubaiBlog11() {
               {/* SECTION: Final Thoughts */}
               <H2>Final Thoughts: How Can You Make the Right Choice?</H2>
               <p>
-                A useful way to approach <Link to="/#properties" className={linkClass}>off plan vs ready property dubai</Link> is to start with your personal objective rather than the property advertisement.
+                A useful way to approach <Link to="/#international" className={linkClass}>off plan vs ready property dubai</Link> is to start with your personal objective rather than the property advertisement.
               </p>
               <p>
                 If your goal is long-term investment and you can wait for the completion of a project, off-plan developments may be worth exploring. If you want a completed home, an earlier possession timeline, or the possibility of rental income, ready properties may be more suitable.
@@ -637,13 +637,25 @@ export default function DubaiBlog11() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
+            {/* <div className="mt-8 flex flex-wrap gap-2">
               {POST.tags.map((t) => (
                 <span key={t} className="rounded-full border bg-white px-3 py-1 text-sm text-gray-600">
                   {t}
                 </span>
               ))}
-            </div>
+            </div> */}
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+  {/* <span className="mr-1 text-sm font-semibold text-gray-500">Tags:</span> */}
+  {POST.tags.map((t) => (
+    <Link
+      key={t}
+      to={`/blog?tag=${encodeURIComponent(t)}`}
+      className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1 text-sm font-medium text-gray-600 transition-all duration-200 hover:border-sippy-gold hover:bg-sippy-gold hover:text-white hover:shadow-sm"
+    >
+      {t}
+    </Link>
+  ))}
+</div>
 
             <div className="mt-10 rounded-xl bg-white p-6 text-center shadow">
               <p className="mb-3 font-semibold text-sippy-charcoal">Looking to buy off-plan or ready property?</p>

@@ -218,10 +218,10 @@ export default function BlogPost3() {
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <H2>Introduction</H2>
               <p>
-                Buying a property in <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> can be an exciting opportunity for homebuyers and international investors. The city offers a wide range of residential properties, including modern apartments, luxury villas, waterfront homes, and off-plan developments. However, before making a purchase, it is important to understand the legal requirements, ownership options, additional costs, and registration process.
+                Buying a property in <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> can be an exciting opportunity for homebuyers and international investors. The city offers a wide range of residential properties, including modern apartments, luxury villas, waterfront homes, and off-plan developments. However, before making a purchase, it is important to understand the legal requirements, ownership options, additional costs, and registration process.
               </p>
               <p>
-                Whether you are purchasing a home for personal use or considering a long-term investment, understanding <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">how to buy property in dubai</Link> can help you make informed decisions. With the right planning and professional guidance, the buying journey can become easier to manage.
+                Whether you are purchasing a home for personal use or considering a long-term investment, understanding <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">how to buy property in dubai</Link> can help you make informed decisions. With the right planning and professional guidance, the buying journey can become easier to manage.
               </p>
               <p>
                 This guide explains the complete <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai property buying process</Link>, from setting your budget and choosing the right location to completing the registration and receiving your ownership documents.
@@ -396,16 +396,28 @@ export default function BlogPost3() {
                 Purchasing real estate in Dubai requires careful planning, proper documentation, and an understanding of the local ownership and registration rules. From choosing the right location and setting a realistic budget to reviewing the sale agreement and completing the official transfer, every step plays an important role in protecting the buyer's interests.
               </p>
               <p>
-                If you are researching <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">how to buy property in dubai</Link>, take time to compare your options and verify all important details before committing. A well-planned approach to the <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai property buying process</Link> can help you make a more confident property decision.
+                If you are researching <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">how to buy property in dubai</Link>, take time to compare your options and verify all important details before committing. A well-planned approach to the <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai property buying process</Link> can help you make a more confident property decision.
               </p>
               <p>
                 For more information about the company and its real estate services, visit the <Link to="/about" className="text-sippy-gold underline hover:text-sippy-charcoal">About Sippy Housing page</Link> or explore the <Link to="/" className="text-sippy-gold underline hover:text-sippy-charcoal">Sippy Housing website</Link>.
               </p>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
+            {/* <div className="mt-8 flex flex-wrap gap-2">
               {POST.tags.map((t) => (
                 <span key={t} className="rounded-full border bg-white px-3 py-1 text-sm text-gray-600">{t}</span>
+              ))}
+            </div> */}
+             <div className="mt-8 flex flex-wrap items-center gap-2">
+              {/* <span className="mr-1 text-sm font-semibold text-gray-500">Tags:</span> */}
+              {POST.tags.map((t) => (
+                <Link
+                  key={t}
+                  to={`/blog?tag=${encodeURIComponent(t)}`}
+                  className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1 text-sm font-medium text-gray-600 transition-all duration-200 hover:border-sippy-gold hover:bg-sippy-gold hover:text-white hover:shadow-sm"
+                >
+                  {t}
+                </Link>
               ))}
             </div>
 

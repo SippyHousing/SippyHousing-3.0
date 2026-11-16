@@ -173,13 +173,11 @@ const TableOfContents = () => {
                 <a
                   href={`#${id}`}
                   onClick={go(id)}
-                  className={`block py-1.5 pr-1 text-sm leading-snug transition-colors ${
-                    t.sub ? "pl-8" : "pl-4"
-                  } ${
-                    on
+                  className={`block py-1.5 pr-1 text-sm leading-snug transition-colors ${t.sub ? "pl-8" : "pl-4"
+                    } ${on
                       ? "-ml-px border-l-2 border-sippy-gold font-semibold text-sippy-charcoal"
                       : "text-gray-500 hover:text-sippy-charcoal"
-                  }`}
+                    }`}
                 >
                   {t.label}
                 </a>
@@ -209,9 +207,8 @@ const MobileTableOfContents = () => (
                 e.currentTarget.closest("details")?.removeAttribute("open");
                 document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
-              className={`block py-1.5 pr-1 text-sm text-gray-600 hover:text-sippy-charcoal ${
-                t.sub ? "pl-8" : "pl-4"
-              }`}
+              className={`block py-1.5 pr-1 text-sm text-gray-600 hover:text-sippy-charcoal ${t.sub ? "pl-8" : "pl-4"
+                }`}
             >
               {t.label}
             </a>
@@ -314,10 +311,10 @@ export default function DubaiBlog13() {
                 Are you planning to invest in Dubai real estate and wondering whether property ownership can help you obtain a UAE Golden Visa? Dubai has become an attractive destination for international property investors because it offers a well-developed real estate market, modern residential communities, and long-term residency opportunities for eligible investors.
               </p>
               <p>
-                The <Link to="/#properties" className={linkClass}>golden visa dubai property</Link> route allows qualifying real estate investors to apply for a renewable 10-year UAE residence permit, subject to the applicable eligibility requirements and approval process. However, purchasing any property does not automatically make someone eligible. The property's value, ownership documents, mortgage arrangements, and application requirements all need to be considered.
+                The <Link to="/#international" className={linkClass}>golden visa dubai property</Link> route allows qualifying real estate investors to apply for a renewable 10-year UAE residence permit, subject to the applicable eligibility requirements and approval process. However, purchasing any property does not automatically make someone eligible. The property's value, ownership documents, mortgage arrangements, and application requirements all need to be considered.
               </p>
               <p>
-                If you are exploring investment opportunities, understanding the rules for a <Link to="/#properties" className={linkClass}>dubai golden visa property</Link> application can help you make a more informed decision before purchasing a home or investment unit.
+                If you are exploring investment opportunities, understanding the rules for a <Link to="/#international" className={linkClass}>dubai golden visa property</Link> application can help you make a more informed decision before purchasing a home or investment unit.
               </p>
               <p>
                 You can also visit <Link to="/" className={linkClass}>Sippy Housing</Link> to explore Dubai property opportunities and learn more about the local real estate market.
@@ -332,7 +329,7 @@ export default function DubaiBlog13() {
                 Unlike an ordinary employment-based residence arrangement, the real estate investor route is linked to meeting the investment and documentation requirements set by the relevant authorities.
               </p>
               <p>
-                The <Link to="/#properties" className={linkClass}>uae golden visa real estate</Link> route is particularly relevant to buyers who plan to own property in Dubai for personal use, investment, or long-term financial planning.
+                The <Link to="/#international" className={linkClass}>uae golden visa real estate</Link> route is particularly relevant to buyers who plan to own property in Dubai for personal use, investment, or long-term financial planning.
               </p>
 
               {/* Quick Insight Box */}
@@ -355,7 +352,7 @@ export default function DubaiBlog13() {
                 According to the Dubai Land Department's Golden Visa investor service, the property purchase value must be at least <strong>AED 2 million</strong> at the time of purchase. One or more properties may be considered, provided the ownership and other applicable conditions are satisfied.
               </p>
               <p>
-                For buyers considering a <Link to="/#properties" className={linkClass}>golden visa dubai property</Link> investment, this means that the total qualifying property value is an important part of the application.
+                For buyers considering a <Link to="/#international" className={linkClass}>golden visa dubai property</Link> investment, this means that the total qualifying property value is an important part of the application.
               </p>
 
               <H3>Can You Combine Multiple Properties to Reach AED 2 Million?</H3>
@@ -386,7 +383,7 @@ export default function DubaiBlog13() {
                 Before purchasing a property with financing, buyers should confirm their individual eligibility and the required paid-amount evidence directly with the Dubai Land Department.
               </p>
               <p>
-                When evaluating a <Link to="/#properties" className={linkClass}>dubai golden visa property</Link> purchase with a mortgage, do not assume that the property's total market value alone will satisfy every application condition.
+                When evaluating a <Link to="/#international" className={linkClass}>dubai golden visa property</Link> purchase with a mortgage, do not assume that the property's total market value alone will satisfy every application condition.
               </p>
 
               <H3>Does Off-Plan Property Qualify for a Dubai Golden Visa?</H3>
@@ -397,7 +394,7 @@ export default function DubaiBlog13() {
                 However, buyers should not assume that every off-plan booking automatically qualifies for a Golden Visa. The eligibility of an off-plan unit depends on the applicable rules, developer approval, registration status, payment evidence, and documentation accepted by the relevant authority.
               </p>
               <p>
-                Before booking an off-plan unit specifically for a <Link to="/#properties" className={linkClass}>uae golden visa real estate</Link> application, confirm the project's eligibility and the required documents with the Dubai Land Department.
+                Before booking an off-plan unit specifically for a <Link to="/#international" className={linkClass}>uae golden visa real estate</Link> application, confirm the project's eligibility and the required documents with the Dubai Land Department.
               </p>
               <p>
                 You can also read our related guide,{" "}
@@ -500,7 +497,7 @@ export default function DubaiBlog13() {
               {/* SECTION: Benefits */}
               <H2>What Are the Benefits of a Golden Visa for Property Investors?</H2>
               <p>
-                A qualifying <Link to="/#properties" className={linkClass}>dubai golden visa property</Link> investment may offer several advantages for investors and their families:
+                A qualifying <Link to="/#international" className={linkClass}>dubai golden visa property</Link> investment may offer several advantages for investors and their families:
               </p>
 
               <H3>1. Long-Term Residency</H3>
@@ -523,7 +520,7 @@ export default function DubaiBlog13() {
                 Investors can explore residential properties across different Dubai communities while considering their personal requirements and long-term investment objectives.
               </p>
               <p className="text-sm text-gray-500">
-                The <Link to="/#properties" className={linkClass}>uae golden visa real estate</Link> route can be one part of a broader investment strategy, but property returns and future market performance are not guaranteed.
+                The <Link to="/#international" className={linkClass}>uae golden visa real estate</Link> route can be one part of a broader investment strategy, but property returns and future market performance are not guaranteed.
               </p>
 
               {/* SECTION: Checklist */}
@@ -548,7 +545,7 @@ export default function DubaiBlog13() {
                 </ul>
               </div>
               <p>
-                A <Link to="/#properties" className={linkClass}>golden visa dubai property</Link> investment should be evaluated for both its real estate value and its eligibility for the residence permit. Do not rely only on marketing claims or informal assurances.
+                A <Link to="/#international" className={linkClass}>golden visa dubai property</Link> investment should be evaluated for both its real estate value and its eligibility for the residence permit. Do not rely only on marketing claims or informal assurances.
               </p>
 
               {/* SECTION: FAQs */}
@@ -612,11 +609,24 @@ export default function DubaiBlog13() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
+            {/* <div className="mt-8 flex flex-wrap gap-2">
               {POST.tags.map((t) => (
                 <span key={t} className="rounded-full border bg-white px-3 py-1 text-sm text-gray-600">
                   {t}
                 </span>
+              ))}
+            </div> */}
+
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+              {/* <span className="mr-1 text-sm font-semibold text-gray-500">Tags:</span> */}
+              {POST.tags.map((t) => (
+                <Link
+                  key={t}
+                  to={`/blog?tag=${encodeURIComponent(t)}`}
+                  className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1 text-sm font-medium text-gray-600 transition-all duration-200 hover:border-sippy-gold hover:bg-sippy-gold hover:text-white hover:shadow-sm"
+                >
+                  {t}
+                </Link>
               ))}
             </div>
 

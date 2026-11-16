@@ -246,10 +246,10 @@ export default function BlogPost2() {
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <H2>Introduction</H2>
               <p>
-                <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> continues to attract international property buyers, investors and businesses because of its modern infrastructure, global connectivity and growing residential communities. The city offers a wide range of real estate options, from affordable apartments and family homes to luxury villas and commercial properties. However, changing market conditions, property prices and new project launches make it important to understand the market before making an investment decision.
+                <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> continues to attract international property buyers, investors and businesses because of its modern infrastructure, global connectivity and growing residential communities. The city offers a wide range of real estate options, from affordable apartments and family homes to luxury villas and commercial properties. However, changing market conditions, property prices and new project launches make it important to understand the market before making an investment decision.
               </p>
               <p>
-                The <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> sector in 2026 presents a market with both opportunities and important factors to consider. Recent transaction data shows that property prices and sales activity do not always move in the same direction. While some price indicators continue to show annual growth, transaction volumes have moderated compared with the previous 12-month period.
+                The <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> sector in 2026 presents a market with both opportunities and important factors to consider. Recent transaction data shows that property prices and sales activity do not always move in the same direction. While some price indicators continue to show annual growth, transaction volumes have moderated compared with the previous 12-month period.
               </p>
               <p>
                 This guide explores the latest market trends, property prices, investment opportunities and factors that may influence the future of the Dubai property sector.
@@ -258,7 +258,7 @@ export default function BlogPost2() {
               {/* 1 */}
               <H2>1. How Is the Dubai Real Estate Market Performing in 2026?</H2>
               <p>
-                The <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> market is showing signs of a more measured phase after strong activity in previous years. Buyers are becoming more selective, while investors are paying closer attention to location, rental demand, property quality and long-term value.
+                The <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> market is showing signs of a more measured phase after strong activity in previous years. Buyers are becoming more selective, while investors are paying closer attention to location, rental demand, property quality and long-term value.
               </p>
               <p>According to market data based on Dubai Land Department registered transactions, the 12 months leading up to 2 November 2026 recorded approximately:</p>
               
@@ -355,7 +355,7 @@ export default function BlogPost2() {
               {/* 5 */}
               <H2>5. What Does the 2026 Market Data Suggest About Future Growth?</H2>
               <p>
-                The <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai property market</Link> is influenced by several connected factors, including population growth, employment opportunities, international investment, infrastructure development and the supply of new homes.
+                The <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai property market</Link> is influenced by several connected factors, including population growth, employment opportunities, international investment, infrastructure development and the supply of new homes.
               </p>
               <p>The latest available market snapshot shows that off-plan transactions account for a substantial share of registered sales. At the same time, the moderation in transaction volume suggests that buyers should avoid assuming that previous growth rates will continue automatically.</p>
 
@@ -392,7 +392,7 @@ export default function BlogPost2() {
               {/* 6 */}
               <H2>6. What Is the Dubai Real Estate Market Forecast for the Coming Years?</H2>
               <p>
-                Any <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai market forecast</Link> should be treated as an outlook rather than a guaranteed prediction. Property prices and transaction activity can change due to economic conditions, new housing supply, interest rates, investor sentiment and government policies.
+                Any <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai market forecast</Link> should be treated as an outlook rather than a guaranteed prediction. Property prices and transaction activity can change due to economic conditions, new housing supply, interest rates, investor sentiment and government policies.
               </p>
               <p>A few factors are likely to remain important when evaluating the market:</p>
 
@@ -470,11 +470,23 @@ export default function BlogPost2() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
+            {/* <div className="mt-8 flex flex-wrap gap-2">
               {POST.tags.map((t) => (
                 <span key={t} className="rounded-full border bg-white px-3 py-1 text-sm text-gray-600">{t}</span>
               ))}
-            </div>
+            </div> */}
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+                          {/* <span className="mr-1 text-sm font-semibold text-gray-500">Tags:</span> */}
+                          {POST.tags.map((t) => (
+                            <Link
+                              key={t}
+                              to={`/blog?tag=${encodeURIComponent(t)}`}
+                              className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1 text-sm font-medium text-gray-600 transition-all duration-200 hover:border-sippy-gold hover:bg-sippy-gold hover:text-white hover:shadow-sm"
+                            >
+                              {t}
+                            </Link>
+                          ))}
+                        </div>
 
             <div className="mt-10 rounded-xl bg-white p-6 text-center shadow">
               <p className="mb-3 font-semibold text-sippy-charcoal">Looking for your next property?</p>

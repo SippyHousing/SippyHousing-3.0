@@ -233,11 +233,11 @@ export default function DubaiBlog() {
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <H2>Introduction</H2>
               <p>
-                <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> has become a popular destination for international property buyers and real estate investors. Its modern infrastructure, business opportunities, premium residential communities, and international connectivity attract people looking to purchase homes or explore investment opportunities.
+                <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> has become a popular destination for international property buyers and real estate investors. Its modern infrastructure, business opportunities, premium residential communities, and international connectivity attract people looking to purchase homes or explore investment opportunities.
               </p>
               <p>However, buying real estate in another country requires proper research and financial planning. Buyers need to understand ownership regulations, property types, payment plans, additional costs, rental demand, and legal requirements before making a decision.</p>
               <p>
-                This <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai property</Link> guide explains the important factors to consider when exploring the <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai real estate</Link> market in 2026.
+                This <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai property</Link> guide explains the important factors to consider when exploring the <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai real estate</Link> market in 2026.
               </p>
 
               <H2>Key Factors to Understand About Dubai's Real Estate Market</H2>
@@ -368,15 +368,27 @@ export default function DubaiBlog() {
 
               <H2>Conclusion</H2>
               <p>
-                Ultimately, a well-planned <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">property in Dubai</Link> purchase should match the buyer's financial capacity, intended use, and long-term objectives.
+                Ultimately, a well-planned <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">property in Dubai</Link> purchase should match the buyer's financial capacity, intended use, and long-term objectives.
               </p>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
+            {/* <div className="mt-8 flex flex-wrap gap-2">
               {POST.tags.map((t) => (
                 <span key={t} className="rounded-full border bg-white px-3 py-1 text-sm text-gray-600">{t}</span>
               ))}
-            </div>
+            </div> */}
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+                          {/* <span className="mr-1 text-sm font-semibold text-gray-500">Tags:</span> */}
+                          {POST.tags.map((t) => (
+                            <Link
+                              key={t}
+                              to={`/blog?tag=${encodeURIComponent(t)}`}
+                              className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1 text-sm font-medium text-gray-600 transition-all duration-200 hover:border-sippy-gold hover:bg-sippy-gold hover:text-white hover:shadow-sm"
+                            >
+                              {t}
+                            </Link>
+                          ))}
+                        </div>
 
             <div className="mt-10 rounded-xl bg-white p-6 text-center shadow">
               <p className="mb-3 font-semibold text-sippy-charcoal">Looking for your next property?</p>

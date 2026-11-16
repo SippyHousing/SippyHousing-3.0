@@ -240,13 +240,13 @@ export default function BlogPost4() {
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <H2>Introduction</H2>
               <p>
-                Buying a property in <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> is an exciting opportunity for Indian buyers who want to invest in international real estate, own a holiday home, or explore rental income opportunities. Dubai attracts investors with its modern infrastructure, international business environment, lifestyle options, and well-developed property market.
+                Buying a property in <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> is an exciting opportunity for Indian buyers who want to invest in international real estate, own a holiday home, or explore rental income opportunities. Dubai attracts investors with its modern infrastructure, international business environment, lifestyle options, and well-developed property market.
               </p>
               <p>
                 However, purchasing property in another country requires more than selecting an apartment or villa. Indian buyers need to understand ownership rules, international money transfers, documentation, registration fees, and the legal process before making a decision.
               </p>
               <p>
-                If you are planning to <Link to="/#properties" className="text-sippy-gold underline hover:text-sippy-charcoal">buy property in dubai from india</Link>, this guide explains the important steps, financial considerations, and documents you should know before starting your property journey.
+                If you are planning to <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">buy property in dubai from india</Link>, this guide explains the important steps, financial considerations, and documents you should know before starting your property journey.
               </p>
 
               {/* SECTION: Why Indian Buyers */}
@@ -477,11 +477,23 @@ export default function BlogPost4() {
               </p>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
+            {/* <div className="mt-8 flex flex-wrap gap-2">
               {POST.tags.map((t) => (
                 <span key={t} className="rounded-full border bg-white px-3 py-1 text-sm text-gray-600">{t}</span>
               ))}
-            </div>
+            </div> */}
+          <div className="mt-8 flex flex-wrap items-center gap-2">
+  <span className="mr-1 text-sm font-semibold text-gray-500">Tags:</span>
+  {POST.tags.map((t) => (
+    <Link
+      key={t}
+      to={`/blog?tag=${encodeURIComponent(t)}`}
+      className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1 text-sm font-medium text-gray-600 transition-all duration-200 hover:border-sippy-gold hover:bg-sippy-gold hover:text-white hover:shadow-sm"
+    >
+      #{t}
+    </Link>
+  ))}
+</div>
 
             <div className="mt-10 rounded-xl bg-white p-6 text-center shadow">
               <p className="mb-3 font-semibold text-sippy-charcoal">Looking for your next property?</p>

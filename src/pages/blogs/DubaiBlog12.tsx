@@ -307,7 +307,7 @@ export default function DubaiBlog12() {
                 Are you planning to buy an off-plan property in Dubai but confused by payment plans such as 60/40, 80/20, 1% monthly, and post-handover options? Dubai's real estate market offers different payment structures that allow buyers to pay for a property in stages instead of paying the entire amount upfront.
               </p>
               <p>
-                Understanding an <Link to="/#properties" className={linkClass}>off plan payment plan dubai</Link> is important before booking a property because each structure affects your budget, payment schedule, and financial planning. Some plans require a larger amount during construction, while others allow buyers to pay a portion after receiving the property.
+                Understanding an <Link to="/#international" className={linkClass}>off plan payment plan dubai</Link> is important before booking a property because each structure affects your budget, payment schedule, and financial planning. Some plans require a larger amount during construction, while others allow buyers to pay a portion after receiving the property.
               </p>
               <p>
                 Whether you are a first-time buyer or an experienced investor, knowing how these plans work can help you compare projects and select an option that matches your financial goals.
@@ -325,7 +325,7 @@ export default function DubaiBlog12() {
                 These payments may be connected to construction milestones or specific calendar dates. Depending on the project, a buyer may pay an initial booking amount, followed by instalments during construction and a final payment at handover.
               </p>
               <p>
-                An <Link to="/#properties" className={linkClass}>off plan payment plan dubai</Link> can make property purchases more manageable by spreading payments over a longer period. However, buyers should always check the complete payment schedule and additional charges before making a booking.
+                An <Link to="/#international" className={linkClass}>off plan payment plan dubai</Link> can make property purchases more manageable by spreading payments over a longer period. However, buyers should always check the complete payment schedule and additional charges before making a booking.
               </p>
 
               <H3>What Are the Main Stages of a Payment Plan?</H3>
@@ -408,7 +408,7 @@ export default function DubaiBlog12() {
                 The remaining AED 400,000 could be divided into instalments according to the developer's agreement.
               </p>
               <p>
-                A <Link to="/#properties" className={linkClass}>post-handover payment plan dubai</Link> option may appeal to investors who want to receive the property before completing all payments. If the property is eligible for rental and finds a tenant, rental income may help contribute towards future instalments. However, rental income is not guaranteed, and buyers should be prepared to meet payments independently.
+                A <Link to="/#international" className={linkClass}>post-handover payment plan dubai</Link> option may appeal to investors who want to receive the property before completing all payments. If the property is eligible for rental and finds a tenant, rental income may help contribute towards future instalments. However, rental income is not guaranteed, and buyers should be prepared to meet payments independently.
               </p>
 
               <H3>Is a Post-Handover Plan Always Better?</H3>
@@ -416,7 +416,7 @@ export default function DubaiBlog12() {
                 Not necessarily. A longer payment period may appear attractive, but buyers should consider the total property price, instalment frequency, payment deadlines, and any additional contractual conditions.
               </p>
               <p>
-                Before choosing a <Link to="/#properties" className={linkClass}>post handover payment plan dubai</Link>, check whether the property can be rented or occupied after handover, when the remaining payments become due, and what happens if an instalment is delayed.
+                Before choosing a <Link to="/#international" className={linkClass}>post handover payment plan dubai</Link>, check whether the property can be rented or occupied after handover, when the remaining payments become due, and what happens if an instalment is delayed.
               </p>
 
               {/* SECTION: 1% Monthly */}
@@ -431,7 +431,7 @@ export default function DubaiBlog12() {
                 The complete payment structure may include an initial booking amount, monthly instalments, and a remaining amount due at or after handover. The exact arrangement varies between projects.
               </p>
               <p>
-                A <Link to="/#properties" className={linkClass}>1% payment plan dubai</Link> option can make monthly budgeting easier for some buyers because the instalment amount is relatively predictable. However, the monthly payment alone does not show the complete financial commitment. Buyers should calculate the booking amount, total monthly instalments, handover balance, and any post-handover payments before making a decision.
+                A <Link to="/#international" className={linkClass}>1% payment plan dubai</Link> option can make monthly budgeting easier for some buyers because the instalment amount is relatively predictable. However, the monthly payment alone does not show the complete financial commitment. Buyers should calculate the booking amount, total monthly instalments, handover balance, and any post-handover payments before making a decision.
               </p>
 
               {/* SECTION: Comparison */}
@@ -449,7 +449,7 @@ export default function DubaiBlog12() {
                 ]}
               />
               <p className="text-sm text-gray-500">
-                When comparing an <Link to="/#properties" className={linkClass}>off plan payment plan dubai</Link>, do not select an option simply because its initial payment looks lower. Consider the complete amount and timing of every instalment.
+                When comparing an <Link to="/#international" className={linkClass}>off plan payment plan dubai</Link>, do not select an option simply because its initial payment looks lower. Consider the complete amount and timing of every instalment.
               </p>
 
               <H3>What Should You Check Before Selecting a Payment Plan?</H3>
@@ -522,7 +522,7 @@ export default function DubaiBlog12() {
                 </ul>
               </div>
               <p>
-                A well-reviewed <Link to="/#properties" className={linkClass}>off plan payment plan dubai</Link> should be clear about the amount payable, payment dates, handover conditions, and any remaining financial obligations.
+                A well-reviewed <Link to="/#international" className={linkClass}>off plan payment plan dubai</Link> should be clear about the amount payable, payment dates, handover conditions, and any remaining financial obligations.
               </p>
 
               {/* SECTION: Find Right Property */}
@@ -595,13 +595,25 @@ export default function DubaiBlog12() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
+            {/* <div className="mt-8 flex flex-wrap gap-2">
               {POST.tags.map((t) => (
                 <span key={t} className="rounded-full border bg-white px-3 py-1 text-sm text-gray-600">
                   {t}
                 </span>
               ))}
-            </div>
+            </div> */}
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+  {/* <span className="mr-1 text-sm font-semibold text-gray-500">Tags:</span> */}
+  {POST.tags.map((t) => (
+    <Link
+      key={t}
+      to={`/blog?tag=${encodeURIComponent(t)}`}
+      className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1 text-sm font-medium text-gray-600 transition-all duration-200 hover:border-sippy-gold hover:bg-sippy-gold hover:text-white hover:shadow-sm"
+    >
+      {t}
+    </Link>
+  ))}
+</div>
 
             <div className="mt-10 rounded-xl bg-white p-6 text-center shadow">
               <p className="mb-3 font-semibold text-sippy-charcoal">Looking for off-plan investment opportunities?</p>
