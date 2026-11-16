@@ -307,7 +307,7 @@ export default function DubaiBlog12() {
                 Are you planning to buy an off-plan property in Dubai but confused by payment plans such as 60/40, 80/20, 1% monthly, and post-handover options? Dubai's real estate market offers different payment structures that allow buyers to pay for a property in stages instead of paying the entire amount upfront.
               </p>
               <p>
-                Understanding an <Link to="/#international" className={linkClass}>off plan payment plan dubai</Link> is important before booking a property because each structure affects your budget, payment schedule, and financial planning. Some plans require a larger amount during construction, while others allow buyers to pay a portion after receiving the property.
+                Understanding an <Link to="/" className={linkClass}>off plan payment plan dubai</Link> is important before booking a property because each structure affects your budget, payment schedule, and financial planning. Some plans require a larger amount during construction, while others allow buyers to pay a portion after receiving the property.
               </p>
               <p>
                 Whether you are a first-time buyer or an experienced investor, knowing how these plans work can help you compare projects and select an option that matches your financial goals.
@@ -325,7 +325,7 @@ export default function DubaiBlog12() {
                 These payments may be connected to construction milestones or specific calendar dates. Depending on the project, a buyer may pay an initial booking amount, followed by instalments during construction and a final payment at handover.
               </p>
               <p>
-                An <Link to="/#international" className={linkClass}>off plan payment plan dubai</Link> can make property purchases more manageable by spreading payments over a longer period. However, buyers should always check the complete payment schedule and additional charges before making a booking.
+                An <Link to="/#invest-dubai" className={linkClass}>off plan payment plan dubai</Link> can make property purchases more manageable by spreading payments over a longer period. However, buyers should always check the complete payment schedule and additional charges before making a booking.
               </p>
 
               <H3>What Are the Main Stages of a Payment Plan?</H3>

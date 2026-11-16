@@ -218,13 +218,13 @@ export default function BlogPost3() {
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <H2>Introduction</H2>
               <p>
-                Buying a property in <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> can be an exciting opportunity for homebuyers and international investors. The city offers a wide range of residential properties, including modern apartments, luxury villas, waterfront homes, and off-plan developments. However, before making a purchase, it is important to understand the legal requirements, ownership options, additional costs, and registration process.
+                Buying a property in <Link to="/#invest-dubai" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> can be an exciting opportunity for homebuyers and international investors. The city offers a wide range of residential properties, including modern apartments, luxury villas, waterfront homes, and off-plan developments. However, before making a purchase, it is important to understand the legal requirements, ownership options, additional costs, and registration process.
               </p>
               <p>
                 Whether you are purchasing a home for personal use or considering a long-term investment, understanding <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">how to buy property in dubai</Link> can help you make informed decisions. With the right planning and professional guidance, the buying journey can become easier to manage.
               </p>
               <p>
-                This guide explains the complete <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai property buying process</Link>, from setting your budget and choosing the right location to completing the registration and receiving your ownership documents.
+                This guide explains the complete <Link to="/#invest-dubai" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai property buying process</Link>, from setting your budget and choosing the right location to completing the registration and receiving your ownership documents.
               </p>
 
               {/* 1 */}

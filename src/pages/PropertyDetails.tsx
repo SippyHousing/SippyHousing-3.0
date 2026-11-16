@@ -1552,10 +1552,14 @@ const PropertyDetails = () => {
   }, [property?.id]);
 
   /* ── open popup only if not already captured this session ── */
+  // const openLeadPopup = () => {
+  //   if (sessionStorage.getItem(SESSION_KEY)) return; // already registered
+  //   setShowLead(true);
+  // };
+
   const openLeadPopup = () => {
-    if (sessionStorage.getItem(SESSION_KEY)) return; // already registered
-    setShowLead(true);
-  };
+  setShowLead(true);
+};
 
   const handleRequestCall = () => {
     const phone = property.contact_number || getContactNumberByProperty(property);
@@ -1631,7 +1635,7 @@ const PropertyDetails = () => {
       <Navbar />
 
       {/* ── Lead capture popup ── */}
-      {showLead && (
+      {/* {showLead && (
         <LeadCapturePopup
           interest={interestLabel}
           leadNumbers={leadNumbers}
@@ -1641,7 +1645,25 @@ const PropertyDetails = () => {
             setShowLead(false);
           }}
         />
-      )}
+      )} */}
+
+      {/* ── Lead capture popup ── */}
+{showLead && (
+  <LeadCapturePopup
+    interest={interestLabel}
+    leadNumbers={leadNumbers}
+    onSuccess={() => {
+      sessionStorage.setItem(SESSION_KEY, "1"); // Marks as submitted
+      setShowLead(false);
+    }}
+    onClose={() => {
+      setShowLead(false); // Simply close without locking the button
+    }}
+  />
+)}
+
+
+
 
       <main className="container mx-auto px-4 py-8 mt-20">
         <button

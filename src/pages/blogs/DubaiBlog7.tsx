@@ -350,7 +350,7 @@ export default function BlogPost7() {
                 Villa prices vary according to location, property size, number of bedrooms, plot area, building quality, and available facilities. A villa in an established premium community may have a very different price from a townhouse in an emerging residential development.
               </p>
               <p>
-                When comparing <Link to="/#international" className={linkClass}>villas for sale in dubai</Link>, it is important to review similar properties in the same community instead of relying on general market averages.
+                When comparing <Link to="/#invest-dubai" className={linkClass}>villas for sale in dubai</Link>, it is important to review similar properties in the same community instead of relying on general market averages.
               </p>
 
               <H3>What Do Recent Dubai Villa Market Figures Show?</H3>
@@ -427,7 +427,7 @@ export default function BlogPost7() {
               {/* SECTION: Checks */}
               <H2>What Should You Check Before Buying a Villa in Dubai?</H2>
               <p>
-                Before deciding to <Link to="/#international" className={linkClass}>buy villa in dubai</Link>, verify the property's legal, financial, and physical details. A careful review can help you avoid unexpected costs and ownership issues.
+                Before deciding to <Link to="/#invest-dubai" className={linkClass}>buy villa in dubai</Link>, verify the property's legal, financial, and physical details. A careful review can help you avoid unexpected costs and ownership issues.
               </p>
 
               <H3>Villa Buying Checklist: What Should You Verify?</H3>
@@ -524,7 +524,7 @@ export default function BlogPost7() {
                 Dubai offers a variety of residential communities for families and investors, from established neighbourhoods to modern lifestyle developments. The right decision depends on your budget, preferred location, property requirements, and long-term objectives.
               </p>
               <p>
-                Before choosing among <Link to="/#international" className={linkClass}>villas for sale in dubai</Link>, compare communities, inspect property details, understand additional expenses, and verify all ownership documents. Whether you are planning to <Link to="/#international" className={linkClass}>buy villa in dubai</Link> for family living or exploring <Link to="/#international" className={linkClass}>luxury villas dubai</Link> for investment, careful research can help you select a property that suits your requirements.
+                Before choosing among <Link to="/#invest-dubai" className={linkClass}>villas for sale in dubai</Link>, compare communities, inspect property details, understand additional expenses, and verify all ownership documents. Whether you are planning to <Link to="/#international" className={linkClass}>buy villa in dubai</Link> for family living or exploring <Link to="/#international" className={linkClass}>luxury villas dubai</Link> for investment, careful research can help you select a property that suits your requirements.
               </p>
               <p>
                 Explore <Link to="/" className={linkClass}>Sippy Housing</Link> to discover Dubai real estate opportunities and get assistance while evaluating properties.

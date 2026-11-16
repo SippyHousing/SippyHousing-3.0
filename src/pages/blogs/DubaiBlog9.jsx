@@ -525,7 +525,7 @@ export default function DubaiBlog9() {
                 The illustrative net yield is 5.80%. This calculation excludes certain acquisition costs and financing expenses, which should also be considered when evaluating the complete investment.
               </p>
               <p>
-                Understanding <Link to="/#international" className={linkClass}>dubai property roi</Link> requires looking beyond annual rent. Investors should also review purchase expenses, future maintenance, financing costs, resale considerations, and possible changes in property value.
+                Understanding <Link to="/#invest-dubai" className={linkClass}>dubai property roi</Link> requires looking beyond annual rent. Investors should also review purchase expenses, future maintenance, financing costs, resale considerations, and possible changes in property value.
               </p>
 
               {/* SECTION: Additional Costs */}
@@ -611,7 +611,7 @@ export default function DubaiBlog9() {
                 Dubai offers different residential investment opportunities, from affordable apartments in established communities to premium properties in well-known neighbourhoods. The right choice depends on your budget, investment objectives, rental demand, and the complete cost of ownership.
               </p>
               <p>
-                Before making a decision, compare the <Link to="/#international" className={linkClass}>rental yield in dubai</Link> across different communities, calculate both gross and net returns, and verify the property's details. A property with a realistic income profile and manageable expenses may be more suitable than one selected only because of a high advertised percentage.
+                Before making a decision, compare the <Link to="/#invest-dubai" className={linkClass}>rental yield in dubai</Link> across different communities, calculate both gross and net returns, and verify the property's details. A property with a realistic income profile and manageable expenses may be more suitable than one selected only because of a high advertised percentage.
               </p>
               <p>
                 Explore <Link to="/" className={linkClass}>Sippy Housing</Link> to discover Dubai property opportunities and get assistance while comparing residential options for your investment plans.

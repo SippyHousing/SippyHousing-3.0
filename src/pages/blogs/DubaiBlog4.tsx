@@ -240,7 +240,7 @@ export default function BlogPost4() {
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <H2>Introduction</H2>
               <p>
-                Buying a property in <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> is an exciting opportunity for Indian buyers who want to invest in international real estate, own a holiday home, or explore rental income opportunities. Dubai attracts investors with its modern infrastructure, international business environment, lifestyle options, and well-developed property market.
+                Buying a property in <Link to="/#invest-dubai" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> is an exciting opportunity for Indian buyers who want to invest in international real estate, own a holiday home, or explore rental income opportunities. Dubai attracts investors with its modern infrastructure, international business environment, lifestyle options, and well-developed property market.
               </p>
               <p>
                 However, purchasing property in another country requires more than selecting an apartment or villa. Indian buyers need to understand ownership rules, international money transfers, documentation, registration fees, and the legal process before making a decision.

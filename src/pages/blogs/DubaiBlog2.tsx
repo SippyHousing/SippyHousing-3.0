@@ -246,10 +246,10 @@ export default function BlogPost2() {
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <H2>Introduction</H2>
               <p>
-                <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> continues to attract international property buyers, investors and businesses because of its modern infrastructure, global connectivity and growing residential communities. The city offers a wide range of real estate options, from affordable apartments and family homes to luxury villas and commercial properties. However, changing market conditions, property prices and new project launches make it important to understand the market before making an investment decision.
+                <Link to="/#invest-dubai" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> continues to attract international property buyers, investors and businesses because of its modern infrastructure, global connectivity and growing residential communities. The city offers a wide range of real estate options, from affordable apartments and family homes to luxury villas and commercial properties. However, changing market conditions, property prices and new project launches make it important to understand the market before making an investment decision.
               </p>
               <p>
-                The <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> sector in 2026 presents a market with both opportunities and important factors to consider. Recent transaction data shows that property prices and sales activity do not always move in the same direction. While some price indicators continue to show annual growth, transaction volumes have moderated compared with the previous 12-month period.
+                The <Link to="/#invest-dubai" className="text-sippy-gold underline hover:text-sippy-charcoal">dubai real estate</Link> sector in 2026 presents a market with both opportunities and important factors to consider. Recent transaction data shows that property prices and sales activity do not always move in the same direction. While some price indicators continue to show annual growth, transaction volumes have moderated compared with the previous 12-month period.
               </p>
               <p>
                 This guide explores the latest market trends, property prices, investment opportunities and factors that may influence the future of the Dubai property sector.

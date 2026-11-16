@@ -37,9 +37,16 @@ const Index = () => {
     };
     load();
     
-    // Handle hash navigation on page load
+    // Handle initial hash navigation on page load
     handleHashNavigation();
   }, []);
+
+  // Re-scroll once all properties have loaded and page layout expands
+  useEffect(() => {
+    if (loaded) {
+      handleHashNavigation();
+    }
+  }, [loaded]);
 
   return (
     <div className="min-h-screen">

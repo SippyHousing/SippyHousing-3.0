@@ -142,7 +142,7 @@ const Footer = () => {
            </div>
 
             {settings.quick_links.length > 0 ? (
-              <ul className="space-y-2 text-base">
+              <ul className="mt-3 space-y-3 text-base">
                 {settings.quick_links.map((link, i) => (
                   <li key={i}>
                     {link.url.startsWith("http") ? (

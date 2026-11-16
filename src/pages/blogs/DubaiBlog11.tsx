@@ -318,10 +318,10 @@ export default function DubaiBlog11() {
                 Are you planning to invest in Dubai real estate but unsure whether to choose an off-plan property or a completed home? Both options offer different advantages, payment structures, timelines, and investment opportunities. The right choice depends on your budget, financial goals, preferred location, and how soon you want to use or earn from the property.
               </p>
               <p>
-                When comparing <Link to="/#international" className={linkClass}>off plan vs ready property dubai</Link>, buyers should look beyond the advertised price. Factors such as construction timelines, developer reputation, rental income, resale potential, maintenance costs, and payment flexibility can significantly influence the overall investment decision.
+                When comparing <Link to="/#invest-dubai" className={linkClass}>off plan vs ready property dubai</Link>, buyers should look beyond the advertised price. Factors such as construction timelines, developer reputation, rental income, resale potential, maintenance costs, and payment flexibility can significantly influence the overall investment decision.
               </p>
               <p>
-                Dubai offers a wide range of residential properties for international buyers, from newly launched apartments to completed villas and luxury residences. If you are exploring the market, <Link to="/" className={linkClass}>Sippy Housing</Link> can help you understand available property options and make a more informed decision.
+                Dubai offers a wide range of residential properties for international buyers, from newly launched apartments to completed villas and luxury residences. If you are exploring the market, <Link to="/#international" className={linkClass}>Sippy Housing</Link> can help you understand available property options and make a more informed decision.
               </p>
 
               {/* SECTION: Difference */}

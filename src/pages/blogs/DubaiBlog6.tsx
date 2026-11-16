@@ -332,7 +332,7 @@ export default function BlogPost6() {
               {/* SECTION: Pricing & Factors */}
               <H2>How Much Do Apartments in Dubai Cost?</H2>
               <p>
-                The price of an apartment in Dubai depends on several core variables. When researching <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">apartments for sale in dubai</Link>, compare units with similar specifications within the same development rather than broad citywide averages.
+                The price of an apartment in Dubai depends on several core variables. When researching <Link to="/#invest-dubai" className="text-sippy-gold underline hover:text-sippy-charcoal">apartments for sale in dubai</Link>, compare units with similar specifications within the same development rather than broad citywide averages.
               </p>
 
               <Table
@@ -398,7 +398,7 @@ export default function BlogPost6() {
               {/* SECTION: Choose by Budget */}
               <H2>How Can You Choose the Right Apartment According to Your Budget?</H2>
               <p>
-                If you plan to <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">buy apartment in dubai</Link>, follow these structured steps:
+                If you plan to <Link to="/#invest-dubai" className="text-sippy-gold underline hover:text-sippy-charcoal">buy apartment in dubai</Link>, follow these structured steps:
               </p>
               <UL items={[
                 <><strong>1. Set a realistic budget:</strong> Determine your exact cash availability, including the 7% to 8% additional closing costs.</>,

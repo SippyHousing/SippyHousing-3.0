@@ -321,7 +321,7 @@ export default function DubaiBlog8() {
                 For many Indian buyers, investing in Dubai is about more than purchasing a property. It can be a way to diversify their assets, explore rental income opportunities, or own a home in an internationally connected city. However, every investment requires proper research, financial planning, and an understanding of local property regulations.
               </p>
               <p>
-                If you are researching <Link to="/#international" className={linkClass}>dubai property investment</Link>, this guide explains why Indian investors are considering the market, which locations they can explore, what costs they should understand, and how to evaluate a property before making a decision.
+                If you are researching <Link to="/#invest-dubai" className={linkClass}>dubai property investment</Link>, this guide explains why Indian investors are considering the market, which locations they can explore, what costs they should understand, and how to evaluate a property before making a decision.
               </p>
 
               {/* Quick Overview Card */}
@@ -449,7 +449,7 @@ export default function DubaiBlog8() {
                 The amount required depends on the location, property type, size, development, and market conditions. A studio apartment and a luxury villa can have very different purchase and ownership costs.
               </p>
               <p>
-                When researching <Link to="/#international" className={linkClass}>property investment in dubai</Link>, investors should calculate the complete cost rather than focusing only on the advertised property price.
+                When researching <Link to="/#invest-dubai" className={linkClass}>property investment in dubai</Link>, investors should calculate the complete cost rather than focusing only on the advertised property price.
               </p>
 
               <H3>Which Expenses Should You Include in Your Investment Budget?</H3>
@@ -602,7 +602,7 @@ export default function DubaiBlog8() {
                 Dubai offers different residential property options, established communities, and an international real estate environment. For Indian buyers, the decision should involve more than choosing an attractive location or property.
               </p>
               <p>
-                Before proceeding with <Link to="/#international" className={linkClass}>dubai property investment</Link>, compare locations, evaluate the complete ownership cost, verify property documents, and understand the financial regulations that apply to your residency status. Whether you are considering an apartment, villa, or off-plan development, a well-researched decision is more valuable than relying on expected returns or promotional claims.
+                Before proceeding with <Link to="/#invest-dubai" className={linkClass}>dubai property investment</Link>, compare locations, evaluate the complete ownership cost, verify property documents, and understand the financial regulations that apply to your residency status. Whether you are considering an apartment, villa, or off-plan development, a well-researched decision is more valuable than relying on expected returns or promotional claims.
               </p>
               <p>
                 Explore <Link to="/" className={linkClass}>Sippy Housing</Link> to discover Dubai property opportunities and get assistance while comparing residential developments.

@@ -311,7 +311,7 @@ export default function DubaiBlog13() {
                 Are you planning to invest in Dubai real estate and wondering whether property ownership can help you obtain a UAE Golden Visa? Dubai has become an attractive destination for international property investors because it offers a well-developed real estate market, modern residential communities, and long-term residency opportunities for eligible investors.
               </p>
               <p>
-                The <Link to="/#international" className={linkClass}>golden visa dubai property</Link> route allows qualifying real estate investors to apply for a renewable 10-year UAE residence permit, subject to the applicable eligibility requirements and approval process. However, purchasing any property does not automatically make someone eligible. The property's value, ownership documents, mortgage arrangements, and application requirements all need to be considered.
+                The <Link to="/#invest-dubai" className={linkClass}>golden visa dubai property</Link> route allows qualifying real estate investors to apply for a renewable 10-year UAE residence permit, subject to the applicable eligibility requirements and approval process. However, purchasing any property does not automatically make someone eligible. The property's value, ownership documents, mortgage arrangements, and application requirements all need to be considered.
               </p>
               <p>
                 If you are exploring investment opportunities, understanding the rules for a <Link to="/#international" className={linkClass}>dubai golden visa property</Link> application can help you make a more informed decision before purchasing a home or investment unit.

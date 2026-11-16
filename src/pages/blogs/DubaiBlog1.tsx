@@ -233,7 +233,7 @@ export default function DubaiBlog() {
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <H2>Introduction</H2>
               <p>
-                <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> has become a popular destination for international property buyers and real estate investors. Its modern infrastructure, business opportunities, premium residential communities, and international connectivity attract people looking to purchase homes or explore investment opportunities.
+                <Link to="/#invest-dubai" className="text-sippy-gold underline hover:text-sippy-charcoal">Dubai</Link> has become a popular destination for international property buyers and real estate investors. Its modern infrastructure, business opportunities, premium residential communities, and international connectivity attract people looking to purchase homes or explore investment opportunities.
               </p>
               <p>However, buying real estate in another country requires proper research and financial planning. Buyers need to understand ownership regulations, property types, payment plans, additional costs, rental demand, and legal requirements before making a decision.</p>
               <p>
@@ -368,7 +368,7 @@ export default function DubaiBlog() {
 
               <H2>Conclusion</H2>
               <p>
-                Ultimately, a well-planned <Link to="/#international" className="text-sippy-gold underline hover:text-sippy-charcoal">property in Dubai</Link> purchase should match the buyer's financial capacity, intended use, and long-term objectives.
+                Ultimately, a well-planned <Link to="/#invest-dubai" className="text-sippy-gold underline hover:text-sippy-charcoal">property in Dubai</Link> purchase should match the buyer's financial capacity, intended use, and long-term objectives.
               </p>
             </div>
 

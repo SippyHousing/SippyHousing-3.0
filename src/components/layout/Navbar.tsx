@@ -506,11 +506,20 @@ const navItems: NavItem[] = [
     label: "Independent",
     href: "#independent-buildings"
   },
+  // {
+  //   label: "International",
+  //   href: "#international",
+   
+  // },
   {
     label: "International",
-    href: "#international",
-   
+    href: "#",
+    subItems: [
+      { label: "International", href: "#international" },
+      { label: "Invest in Dubai", href: "#invest-dubai" }
+    ]
   },
+  
   {
     label: "About Us",
     href: "/about"

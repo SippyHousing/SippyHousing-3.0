@@ -418,14 +418,14 @@ const LeadCapturePopup = ({ interest, onSuccess, onClose, leadNumbers }: LeadCap
               <div>
                 <label style={labelStyle}>Full Name <span style={{ color: "#ef4444" }}>*</span></label>
                 <input name="name" value={form.name} onChange={handle}
-                  placeholder="e.g. Rahul Sharma"
+                  placeholder=""
                   className="lead-input" style={inputStyle} />
               </div>
 
               <div>
                 <label style={labelStyle}>Phone Number <span style={{ color: "#ef4444" }}>*</span></label>
                 <input name="phone" value={form.phone} onChange={handle}
-                  placeholder="e.g. 9876543210" type="tel"
+                  placeholder="" type="tel"
                   className="lead-input" style={inputStyle} />
               </div>
 
@@ -435,7 +435,7 @@ const LeadCapturePopup = ({ interest, onSuccess, onClose, leadNumbers }: LeadCap
                     Email <span style={{ fontSize: 10, color: "#9ca3af", fontWeight: 400 }}>(optional)</span>
                   </label>
                   <input name="email" value={form.email} onChange={handle}
-                    placeholder="you@email.com" type="email"
+                    placeholder="" type="email"
                     className="lead-input" style={inputStyle} />
                 </div>
                 <div>
@@ -443,7 +443,7 @@ const LeadCapturePopup = ({ interest, onSuccess, onClose, leadNumbers }: LeadCap
                     City <span style={{ fontSize: 10, color: "#9ca3af", fontWeight: 400 }}>(optional)</span>
                   </label>
                   <input name="city" value={form.city} onChange={handle}
-                    placeholder="e.g. Mumbai"
+                    placeholder=""
                     className="lead-input" style={inputStyle} />
                 </div>
               </div>

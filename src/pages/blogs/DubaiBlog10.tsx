@@ -540,7 +540,7 @@ export default function DubaiBlog10() {
               {/* SECTION: How to Choose */}
               <H2>How Can You Choose the Right Studio for Your Budget?</H2>
               <p>
-                The right property should match your financial capacity, location preferences, and long-term plans. Before you <Link to="/#international" className={linkClass}>buy studio in dubai</Link>, consider the following steps:
+                The right property should match your financial capacity, location preferences, and long-term plans. Before you <Link to="/#invest-dubai" className={linkClass}>buy studio in dubai</Link>, consider the following steps:
               </p>
               <UL
                 items={[
@@ -609,7 +609,7 @@ export default function DubaiBlog10() {
                 Dubai offers studio properties across different budgets, neighbourhoods, and residential developments. The best choice depends on your financial plans, preferred location, property condition, and expected ownership costs.
               </p>
               <p>
-                Before choosing a <Link to="/#international" className={linkClass}>studio apartment in dubai</Link>, compare prices across communities, understand the additional expenses, and evaluate the property's suitability for your requirements. Whether you are looking for a compact home or exploring a <Link to="/#international" className={linkClass}>studio for sale dubai</Link> for investment, careful research can help you make a better-informed decision.
+                Before choosing a <Link to="/#invest-dubai" className={linkClass}>studio apartment in dubai</Link>, compare prices across communities, understand the additional expenses, and evaluate the property's suitability for your requirements. Whether you are looking for a compact home or exploring a <Link to="/#international" className={linkClass}>studio for sale dubai</Link> for investment, careful research can help you make a better-informed decision.
               </p>
               <p>
                 Explore <Link to="/" className={linkClass}>Sippy Housing</Link> to discover Dubai property opportunities and get assistance while comparing residential options.
