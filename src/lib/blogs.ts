@@ -250,6 +250,20 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-16T10:00:00Z",
     updated_at: null,
   },
+    // Blog 14 (New)
+  {
+    id: "14",
+    slug: "which-freehold-areas-in-dubai-can-foreigners-buy-property-in",
+    title: "Which Freehold Areas in Dubai Can Foreigners Buy Property In?",
+    excerpt: "Explore the designated freehold areas in Dubai where foreigners can purchase property, understand the difference between freehold, leasehold, and usufruct, and review the essential buyer checklist.",
+    cover_image: "/blogimg14.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Freehold Areas Dubai", "Dubai Real Estate", "Foreign Buyers", "Dubai Marina", "Downtown Dubai", "Palm Jumeirah", "Business Bay", "2026"],
+    read_time: 8,
+    published_at: "2026-11-17T10:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 
