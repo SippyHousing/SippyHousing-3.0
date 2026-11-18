@@ -264,6 +264,20 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-17T10:00:00Z",
     updated_at: null,
   },
+  // Blog 15 (New)
+  {
+    id: "15",
+    slug: "can-indians-buy-property-in-dubai-what-are-the-rules-eligibility-and-required-documents",
+    title: "Can Indians Buy Property in Dubai? What Are the Rules, Eligibility and Required Documents?",
+    excerpt: "Can Indian residents and NRIs purchase property in Dubai? Discover the foreign ownership rules, LRS & FEMA remittance guidelines, required documents, step-by-step process, and costs.",
+    cover_image: "/blogimg15.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Indians in Dubai", "Dubai Real Estate", "NRI Property Investment", "FEMA & LRS", "DLD Registration", "Dubai Marina", "Golden Visa", "2026"],
+    read_time: 9,
+    published_at: "2026-11-18T10:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 

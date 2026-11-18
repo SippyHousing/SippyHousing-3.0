@@ -1372,6 +1372,7 @@ import BlogPost11 from "@/pages/blogs/DubaiBlog11"; // <-- Blog 5 added
 import BlogPost12 from "@/pages/blogs/DubaiBlog12"; // <-- Blog 5 added
 import BlogPost13 from "@/pages/blogs/DubaiBlog13"; // <-- Blog 5 added
 import BlogPost14 from "@/pages/blogs/DubaiBlog14"; // <-- Blog 5 added
+import BlogPost15 from "@/pages/blogs/DubaiBlog15";
 // 2. Map each slug from your blog.ts to its component!
 const BLOGS: Record<string, React.ComponentType> = {
   // Blog 1
@@ -1400,6 +1401,7 @@ const BLOGS: Record<string, React.ComponentType> = {
   "how-do-dubai-off-plan-payment-plans-work-a-complete-guide-to-60-40-80-20-and-post-handover-options": BlogPost12,
   "can-you-get-a-dubai-golden-visa-through-property-investment-what-are-the-eligibility-rules-and-application-steps": BlogPost13,
   "which-freehold-areas-in-dubai-can-foreigners-buy-property-in": BlogPost14,
+  "can-indians-buy-property-in-dubai-what-are-the-rules-eligibility-and-required-documents": BlogPost15,
 };
 
 export default function BlogPostPage() {
