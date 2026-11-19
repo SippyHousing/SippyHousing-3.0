@@ -408,7 +408,7 @@ export default function DubaiBlog12() {
                 The remaining AED 400,000 could be divided into instalments according to the developer's agreement.
               </p>
               <p>
-                A <Link to="/#international" className={linkClass}>post-handover payment plan dubai</Link> option may appeal to investors who want to receive the property before completing all payments. If the property is eligible for rental and finds a tenant, rental income may help contribute towards future instalments. However, rental income is not guaranteed, and buyers should be prepared to meet payments independently.
+                A <Link to="/#invest-dubai" className={linkClass}>post-handover payment plan dubai</Link> option may appeal to investors who want to receive the property before completing all payments. If the property is eligible for rental and finds a tenant, rental income may help contribute towards future instalments. However, rental income is not guaranteed, and buyers should be prepared to meet payments independently.
               </p>
 
               <H3>Is a Post-Handover Plan Always Better?</H3>
@@ -431,7 +431,7 @@ export default function DubaiBlog12() {
                 The complete payment structure may include an initial booking amount, monthly instalments, and a remaining amount due at or after handover. The exact arrangement varies between projects.
               </p>
               <p>
-                A <Link to="/#international" className={linkClass}>1% payment plan dubai</Link> option can make monthly budgeting easier for some buyers because the instalment amount is relatively predictable. However, the monthly payment alone does not show the complete financial commitment. Buyers should calculate the booking amount, total monthly instalments, handover balance, and any post-handover payments before making a decision.
+                A <Link to="/#invest-dubai" className={linkClass}>1% payment plan dubai</Link> option can make monthly budgeting easier for some buyers because the instalment amount is relatively predictable. However, the monthly payment alone does not show the complete financial commitment. Buyers should calculate the booking amount, total monthly instalments, handover balance, and any post-handover payments before making a decision.
               </p>
 
               {/* SECTION: Comparison */}
@@ -449,7 +449,7 @@ export default function DubaiBlog12() {
                 ]}
               />
               <p className="text-sm text-gray-500">
-                When comparing an <Link to="/#international" className={linkClass}>off plan payment plan dubai</Link>, do not select an option simply because its initial payment looks lower. Consider the complete amount and timing of every instalment.
+                When comparing an <Link to="/#invest-dubai" className={linkClass}>off plan payment plan dubai</Link>, do not select an option simply because its initial payment looks lower. Consider the complete amount and timing of every instalment.
               </p>
 
               <H3>What Should You Check Before Selecting a Payment Plan?</H3>

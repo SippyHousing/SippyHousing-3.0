@@ -278,6 +278,19 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-18T10:00:00Z",
     updated_at: null,
   },
+    {
+    id: "16",
+    slug: "what-are-dubai-property-prices-in-2026-area-wise-price-per-sq-ft-explained",
+    title: "What Are Dubai Property Prices in 2026? Area-wise Price per Sq Ft Explained",
+    excerpt: "Explore Dubai property prices in 2026 with area-wise median price per sq ft for Palm Jumeirah, Downtown, Dubai Marina, JVC and more, plus cost factors and buyer checklist.",
+    cover_image: "/blogimg16.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Dubai Property Prices", "Price per Sq Ft", "Dubai Real Estate", "Palm Jumeirah", "Downtown Dubai", "JVC", "Indian Buyers", "2026"],
+    read_time: 8,
+    published_at: "2026-11-19T10:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 

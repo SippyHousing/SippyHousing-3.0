@@ -336,7 +336,7 @@ export default function DubaiBlog11() {
                 <strong>Ready property</strong> is an already completed residential unit that can be inspected before purchase. It may be purchased directly from an existing owner or through the resale market. Depending on its occupancy status and transfer process, the buyer may be able to move in or rent it out soon after completing the transaction.
               </p>
               <p>
-                For buyers comparing <Link to="/#international" className={linkClass}>off plan vs ready property dubai</Link>, the biggest difference is the time between purchase and possession.
+                For buyers comparing <Link to="/#invest-dubai" className={linkClass}>off plan vs ready property dubai</Link>, the biggest difference is the time between purchase and possession.
               </p>
 
               {/* Quick Insight Box */}

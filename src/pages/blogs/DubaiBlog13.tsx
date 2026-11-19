@@ -329,7 +329,7 @@ export default function DubaiBlog13() {
                 Unlike an ordinary employment-based residence arrangement, the real estate investor route is linked to meeting the investment and documentation requirements set by the relevant authorities.
               </p>
               <p>
-                The <Link to="/#international" className={linkClass}>uae golden visa real estate</Link> route is particularly relevant to buyers who plan to own property in Dubai for personal use, investment, or long-term financial planning.
+                The <Link to="/#invest-dubai" className={linkClass}>uae golden visa real estate</Link> route is particularly relevant to buyers who plan to own property in Dubai for personal use, investment, or long-term financial planning.
               </p>
 
               {/* Quick Insight Box */}
@@ -352,7 +352,7 @@ export default function DubaiBlog13() {
                 According to the Dubai Land Department's Golden Visa investor service, the property purchase value must be at least <strong>AED 2 million</strong> at the time of purchase. One or more properties may be considered, provided the ownership and other applicable conditions are satisfied.
               </p>
               <p>
-                For buyers considering a <Link to="/#international" className={linkClass}>golden visa dubai property</Link> investment, this means that the total qualifying property value is an important part of the application.
+                For buyers considering a <Link to="/#invest-dubai" className={linkClass}>golden visa dubai property</Link> investment, this means that the total qualifying property value is an important part of the application.
               </p>
 
               <H3>Can You Combine Multiple Properties to Reach AED 2 Million?</H3>
@@ -383,7 +383,7 @@ export default function DubaiBlog13() {
                 Before purchasing a property with financing, buyers should confirm their individual eligibility and the required paid-amount evidence directly with the Dubai Land Department.
               </p>
               <p>
-                When evaluating a <Link to="/#international" className={linkClass}>dubai golden visa property</Link> purchase with a mortgage, do not assume that the property's total market value alone will satisfy every application condition.
+                When evaluating a <Link to="/#invest-dubai" className={linkClass}>dubai golden visa property</Link> purchase with a mortgage, do not assume that the property's total market value alone will satisfy every application condition.
               </p>
 
               <H3>Does Off-Plan Property Qualify for a Dubai Golden Visa?</H3>
@@ -394,7 +394,7 @@ export default function DubaiBlog13() {
                 However, buyers should not assume that every off-plan booking automatically qualifies for a Golden Visa. The eligibility of an off-plan unit depends on the applicable rules, developer approval, registration status, payment evidence, and documentation accepted by the relevant authority.
               </p>
               <p>
-                Before booking an off-plan unit specifically for a <Link to="/#international" className={linkClass}>uae golden visa real estate</Link> application, confirm the project's eligibility and the required documents with the Dubai Land Department.
+                Before booking an off-plan unit specifically for a <Link to="/#invest-dubai" className={linkClass}>uae golden visa real estate</Link> application, confirm the project's eligibility and the required documents with the Dubai Land Department.
               </p>
               <p>
                 You can also read our related guide,{" "}

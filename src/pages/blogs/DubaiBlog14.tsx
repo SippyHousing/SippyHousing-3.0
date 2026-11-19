@@ -493,9 +493,9 @@ export default function DubaiBlog14() {
               </div>
               <p>
                 You can refer to the{" "}
-                <a href="https://dubailand.gov.ae/" target="_blank" rel="noopener noreferrer" className={linkClass}>
+              
                   Dubai Land Department
-                </a>{" "}
+            
                 official portal for updated information on foreign ownership rules and approved zones.
               </p>
 

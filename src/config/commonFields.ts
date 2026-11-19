@@ -80,6 +80,31 @@ export const COMMON_FIELDS: CategoryField[] = [
     placeholder: 'Enter country'
   },
 
+  // ── Property Details Section ────────────────────────────────────────────────
+  // These fields map to the "Property Details" card shown on the public listing
+  // page (society_property_name → "Society / Property", building → "Project
+  // Details", units → "Unit Details"). Added to COMMON_FIELDS so every category
+  // gets an edit option for them.
+  {
+    name: 'Project Details',
+    key: 'building',
+    type: 'text',
+    placeholder: 'e.g. Tower A, Block B'
+  },
+  {
+    name: 'Society / Property Name',
+    key: 'society_property_name',
+    type: 'text',
+    placeholder: 'e.g. Mount Mary Society'
+  },
+  {
+    name: 'Unit Details (Total Units)',
+    key: 'units',
+    type: 'number',
+    placeholder: 'e.g. 120'
+  },
+  // ── End Property Details Section ────────────────────────────────────────────
+
 {
   key: 'remarks',
   name: 'Remarks / Additional Details',

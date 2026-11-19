@@ -322,7 +322,7 @@ export default function DubaiBlog10() {
                 Are you planning to purchase a compact home in Dubai or looking for a property that fits your investment budget? Dubai offers a wide range of residential options, from affordable studios in developing communities to premium apartments in well-known neighbourhoods. With modern facilities, convenient transport connections, and an active rental market, studio apartments attract first-time buyers, professionals, and property investors.
               </p>
               <p>
-                However, choosing the right property requires more than looking at its advertised price. Location, apartment size, building quality, service charges, rental demand, and future requirements can all influence your decision. If you are researching a <Link to="/#international" className={linkClass}>studio apartment in dubai</Link>, this guide will help you understand average prices, popular locations, property features, and important buying considerations.
+                However, choosing the right property requires more than looking at its advertised price. Location, apartment size, building quality, service charges, rental demand, and future requirements can all influence your decision. If you are researching a <Link to="/#invest-dubai" className={linkClass}>studio apartment in dubai</Link>, this guide will help you understand average prices, popular locations, property features, and important buying considerations.
               </p>
 
               {/* Quick Overview Card */}
