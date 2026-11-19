@@ -29,7 +29,7 @@ export interface CategoryField {
   /** Set false to hide the per-field "+ Remark" box (default: every field gets one) */
   remark?: boolean;
 }
-
+export const PROPERTY_DETAILS_KEYS = ['building', 'society_property_name', 'units'];
 export const COMMON_FIELDS: CategoryField[] = [
     {
   key: 'property_code',
@@ -152,11 +152,25 @@ export const COMMON_FIELDS: CategoryField[] = [
 ];
 
 /** Common fields in the order shown for a given category (International shows Country first). */
+// export const getCommonFieldsForCategory = (slug?: string): CategoryField[] => {
+//   if (slug === 'international') {
+//     const country = COMMON_FIELDS.find(f => f.key === 'country');
+//     const rest = COMMON_FIELDS.filter(f => f.key !== 'country');
+//     return country ? [country, ...rest] : COMMON_FIELDS;
+//   }
+//   return COMMON_FIELDS;
+// };
+
+export const getPropertyDetailsFields = (): CategoryField[] =>
+  COMMON_FIELDS.filter((f) => PROPERTY_DETAILS_KEYS.includes(f.key));
+/** Common fields in the order shown for a given category (International shows Country first).
+ *  Property Details fields are excluded here – they have their own section. */
 export const getCommonFieldsForCategory = (slug?: string): CategoryField[] => {
+  const base = COMMON_FIELDS.filter((f) => !PROPERTY_DETAILS_KEYS.includes(f.key));
   if (slug === 'international') {
-    const country = COMMON_FIELDS.find(f => f.key === 'country');
-    const rest = COMMON_FIELDS.filter(f => f.key !== 'country');
-    return country ? [country, ...rest] : COMMON_FIELDS;
+    const country = base.find((f) => f.key === 'country');
+    const rest = base.filter((f) => f.key !== 'country');
+    return country ? [country, ...rest] : base;
   }
-  return COMMON_FIELDS;
+  return base;
 };

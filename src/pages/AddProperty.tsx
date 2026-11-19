@@ -13,6 +13,7 @@ import AdminLayout from "@/components/layout/AdminLayout";
 import { propertyService } from "@/services/propertyService";
 import { Property } from "@/lib/supabase";
 import ImageUpload from "@/components/ui/image-upload";
+import { getCommonFieldsForCategory, getPropertyDetailsFields } from "@/config/commonFields";
 import {
   ArrowLeft,
   Plus,
@@ -27,7 +28,7 @@ import { DynamicFormField } from "@/components/property/DynamicFormField";
 import { MultiCategorySelector } from "@/components/property/MultiCategorySelector";
 import { VideoLinksInput } from "@/components/property/VideoLinksInput";
 import { UnitVariantsInput } from "@/components/property/UnitVariantsInput";
-import { getCommonFieldsForCategory } from "@/config/commonFields";
+//import { getCommonFieldsForCategory } from "@/config/commonFields";
 import { getCategoryBySlug, PROPERTY_CATEGORIES } from "@/config/propertyCategories";
 
 // Form validation schema - all fields optional
@@ -41,6 +42,7 @@ const createPropertySchema = () => {
     city: z.string().optional(),
     country: z.string().optional(),
     real_property_name: z.string().optional(),
+    society_property_name: z.string().optional(),
     remarks: z.string().optional(),
     sales_person_name: z.string().optional(),
     deal_highlight: z.string().optional(),
@@ -400,12 +402,28 @@ const AddProperty = () => {
                       ))}
                     </div>
                   </div>
+                  {/* Property Details (shown in "Property Details" card on website) */}
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-semibold flex items-center">
+                      <Info className="h-4 w-4 mr-2" />
+                      Step 3: Property Details
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      These appear in the "Property Details" section on the property page
+                      (Project Details, Society / Property, Unit Details). Country is under Common Information above.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {getPropertyDetailsFields().map((field) => (
+                        <DynamicFormField key={field.key} field={field} control={control} />
+                      ))}
+                    </div>
+                  </div>
 
                   {/* Category-Specific Fields */}
                   <div className="space-y-4">
                     <h3 className="text-lg font-semibold flex items-center">
                       <Info className="h-4 w-4 mr-2" />
-                      Step 3: {selectedCategoryConfig.name} Specific Details
+                      Step 4: {selectedCategoryConfig.name} Specific Details
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {selectedCategoryConfig.fields.map((field) => (
@@ -431,7 +449,7 @@ const AddProperty = () => {
                   <div className="space-y-4">
                     <h3 className="text-lg font-semibold flex items-center">
                       <Info className="h-4 w-4 mr-2" />
-                      Step 4: Video Links
+                      Step 5: Video Links
                     </h3>
                     <VideoLinksInput control={control} />
                   </div>
@@ -440,7 +458,7 @@ const AddProperty = () => {
                   <div className="space-y-4">
                     <h3 className="text-lg font-semibold flex items-center">
                       <ImageIcon className="h-4 w-4 mr-2" />
-                      Step 5: Property Images
+                      Step 6: Property Images
                     </h3>
                     <ImageUpload
                       onImagesSelected={handleImagesSelected}
@@ -455,7 +473,7 @@ const AddProperty = () => {
                   <div className="space-y-4">
                     <h3 className="text-lg font-semibold flex items-center">
                       <Info className="h-4 w-4 mr-2" />
-                      Step 6: Additional Category Visibility
+                      Step 7: Additional Category Visibility
                     </h3>
                     <MultiCategorySelector
                       control={control}

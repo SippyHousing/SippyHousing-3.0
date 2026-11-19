@@ -10,9 +10,10 @@ import AdminLayout from "@/components/layout/AdminLayout";
 import { propertyService, PropertyImage } from "@/services/propertyService";
 import { Property } from "@/lib/supabase";
 import ImageUpload from "@/components/ui/image-upload";
-import { 
-  ArrowLeft, 
-  Save, 
+import { getCommonFieldsForCategory, getPropertyDetailsFields } from "@/config/commonFields";
+import {
+  ArrowLeft,
+  Save,
   Loader2,
   Image as ImageIcon,
   Trash2,
@@ -25,7 +26,7 @@ import { DynamicFormField } from "@/components/property/DynamicFormField";
 import { MultiCategorySelector } from "@/components/property/MultiCategorySelector";
 import { VideoLinksInput } from "@/components/property/VideoLinksInput";
 import { UnitVariantsInput } from "@/components/property/UnitVariantsInput";
-import { getCommonFieldsForCategory } from "@/config/commonFields";
+//import { getCommonFieldsForCategory } from "@/config/commonFields";
 import { getCategoryBySlug, PROPERTY_CATEGORIES } from "@/config/propertyCategories";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
@@ -41,17 +42,19 @@ const createPropertySchema = () => {
     country: z.string().optional(),
     property_code: z.string().optional(),
     real_property_name: z.string().optional(),
+    society_property_name: z.string().optional(),
+
     remarks: z.string().optional(),
     sales_person_name: z.string().optional(),
     deal_highlight: z.string().optional(),
     field_remarks: z.record(z.string()).optional(),
     lead_numbers: z.string().optional(),
-    
+
     // Category assignment
     primary_category: z.string().optional(),
     category_assignments: z.array(z.string()).optional(),
     video_links: z.array(z.string()).optional(),
-    
+
     // Legacy fields (for backward compatibility)
     building: z.string().optional(),
     builder: z.string().optional(),
@@ -95,7 +98,7 @@ const createPropertySchema = () => {
             baseSchema[field.key] = z.string().optional();
         }
       }
-      
+
       // Add unit fields if they exist
       if (field.unit && field.unitOptions) {
         baseSchema[field.unit] = z.string().optional();
@@ -127,12 +130,12 @@ const migratePropertyData = (property: Property): Partial<PropertyFormData> => {
     sub_location: property.sub_location || '',
     city: property.city || '',
     country: property.country || '',
-    
+
     // Category assignment
     primary_category: property.primary_category || '',
     category_assignments: property.category_assignments || [],
     video_links: property.video_links || [],
-    
+
     // Legacy fields (preserve for backward compatibility)
     building: property.building || '',
     builder: property.builder || '',
@@ -151,6 +154,7 @@ const migratePropertyData = (property: Property): Partial<PropertyFormData> => {
     unit_variants: property.unit_variants ?? [],
     property_code: property.property_code || '',
     real_property_name: property.real_property_name || '',
+    society_property_name: property.society_property_name || '',
     remarks: property.remarks || '',
     sales_person_name: property.sales_person_name || '',
     // builder: property.builder || '',
@@ -166,7 +170,7 @@ const migratePropertyData = (property: Property): Partial<PropertyFormData> => {
       if (property[key] !== undefined && property[key] !== null) {
         (formData as any)[field.key] = property[key];
       }
-      
+
       // Handle unit fields
       if (field.unit) {
         const unitKey = field.unit as keyof Property;
@@ -227,11 +231,11 @@ const EditProperty = () => {
       if (data) {
         // Migrate old data to new format
         const migratedData = migratePropertyData(data);
-        
+
         // Set primary category
         const category = data.primary_category || '';
         setPrimaryCategory(category);
-        
+
         // Set all form values
         Object.keys(migratedData).forEach((key) => {
           const value = (migratedData as any)[key];
@@ -320,7 +324,7 @@ const EditProperty = () => {
 
     try {
       setIsSubmitting(true);
-      
+
       // Prepare property data - include all fields
       const unitVariants = (data.unit_variants ?? []).filter(
         (v: { type?: string; price?: string }) => !!(v.type?.trim() || v.price?.trim())
@@ -367,11 +371,11 @@ const EditProperty = () => {
     try {
       setIsUploadingImages(true);
       await propertyService.uploadMultipleImages(selectedImages, id);
-      
+
       // Refresh property images
       const images = await propertyService.getPropertyImages(id);
       setPropertyImages(images);
-      
+
       setSelectedImages([]);
       toast({
         title: "Success",
@@ -407,13 +411,13 @@ const EditProperty = () => {
   const handleDeleteImage = async (imageId: string) => {
     try {
       await propertyService.deleteImage(imageId);
-      
+
       // Refresh property images
       if (id) {
         const images = await propertyService.getPropertyImages(id);
         setPropertyImages(images);
       }
-      
+
       toast({
         title: "Success",
         description: "Image deleted successfully!",
@@ -459,15 +463,15 @@ const EditProperty = () => {
   return (
     <AdminLayout title="Edit Property">
       <div className="mb-6">
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           onClick={() => navigate("/admin/properties")}
           className="mb-4"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Properties
         </Button>
-        
+
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Edit Property</h2>
           <p className="text-gray-600">Update property details</p>
@@ -495,7 +499,7 @@ const EditProperty = () => {
                 selectedCategory={primaryCategory}
                 onCategorySelect={handleCategorySelect}
               />
-              
+
               {showCategoryChangeWarning && pendingCategory && (
                 <Alert variant="destructive">
                   <AlertTriangle className="h-4 w-4" />
@@ -524,7 +528,7 @@ const EditProperty = () => {
                 </Alert>
               )}
             </div>
-
+           
             {/* Property Form (only show if category selected) */}
             {primaryCategory && selectedCategoryConfig && (
               <>
@@ -566,6 +570,22 @@ const EditProperty = () => {
                     </div>
                   )}
                 </div>
+                 {/* Property Details (shown in "Property Details" card on website) */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold flex items-center">
+                <Info className="h-4 w-4 mr-2" />
+                Property Details
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                These appear in the "Property Details" section on the property page
+                (Project Details, Society / Property, Unit Details). Country is under Common Information above.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {getPropertyDetailsFields().map((field) => (
+                  <DynamicFormField key={field.key} field={field} control={control} />
+                ))}
+              </div>
+            </div>
 
                 {/* Video Links */}
                 <div className="space-y-4">
@@ -637,7 +657,7 @@ const EditProperty = () => {
               maxImages={10}
             />
             {selectedImages.length > 0 && (
-              <Button 
+              <Button
                 onClick={handleUploadImages}
                 disabled={isUploadingImages}
                 className="w-full"
@@ -688,7 +708,7 @@ const EditProperty = () => {
                         Make cover
                       </Button>
                     )}
-                    
+
                     <Button
                       type="button"
                       variant="destructive"
