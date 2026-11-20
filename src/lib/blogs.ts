@@ -291,6 +291,19 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-19T10:00:00Z",
     updated_at: null,
   },
+    {
+    id: "17",
+    slug: "what-are-dubai-property-registration-fees-in-2026-dld-fees-and-total-buying-costs-explained",
+    title: "What Are Dubai Property Registration Fees in 2026? DLD Fees and Total Buying Costs Explained",
+    excerpt: "Buying property in Dubai involves more than the agreed price. Understand DLD registration fees, trustee charges, mortgage costs, and the total cost of buying property in Dubai in 2026.",
+    cover_image: "/blogimg17.jpeg",
+    category: "Buyer & Legal Guide",
+    author: "Sippy Housing",
+    tags: ["DLD Fees Dubai", "Dubai Land Department", "Property Registration", "Dubai Real Estate", "Cost of Buying Property", "Mortgage Registration", "Trustee Fee", "NRI Property Investment", "2026"],
+    read_time: 9,
+    published_at: "2026-11-20T10:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 
