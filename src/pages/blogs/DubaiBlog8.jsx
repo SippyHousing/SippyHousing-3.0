@@ -84,7 +84,8 @@ const Table = ({ head, rows }) => (
   </div>
 );
 
-const linkClass = "text-sippy-gold underline hover:text-sippy-charcoal";
+//const linkClass = "text-sippy-gold underline hover:text-sippy-charcoal";
+const linkClass = "text-sippy-gold hover:underline hover:text-sippy-charcoal font-medium";
 
 // Table of contents (labels match <H2> / <H3> text exactly)
 const TOC = [

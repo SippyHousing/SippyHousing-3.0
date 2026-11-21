@@ -1375,6 +1375,7 @@ import BlogPost14 from "@/pages/blogs/DubaiBlog14"; // <-- Blog 5 added
 import BlogPost15 from "@/pages/blogs/DubaiBlog15";
 import BlogPost16 from "@/pages/blogs/DubaiBlog16";
 import BlogPost17 from "@/pages/blogs/DubaiBlog17";
+import BlogPost18 from "@/pages/blogs/DubaiBlog18";
 // 2. Map each slug from your blog.ts to its component!
 const BLOGS: Record<string, React.ComponentType> = {
   // Blog 1
@@ -1405,7 +1406,8 @@ const BLOGS: Record<string, React.ComponentType> = {
   "which-freehold-areas-in-dubai-can-foreigners-buy-property-in": BlogPost14,
   "can-indians-buy-property-in-dubai-what-are-the-rules-eligibility-and-required-documents": BlogPost15,
   "what-are-dubai-property-prices-in-2026-area-wise-price-per-sq-ft-explained": BlogPost16,
-  "what-are-dubai-property-registration-fees-in-2026-dld-fees-and-total-buying-costs-explained":BlogPost17
+  "what-are-dubai-property-registration-fees-in-2026-dld-fees-and-total-buying-costs-explained":BlogPost17,
+    "best-areas-to-invest-in-dubai-property-in-2026-which-location-should-you-choose":BlogPost18,
 };
 
 export default function BlogPostPage() {

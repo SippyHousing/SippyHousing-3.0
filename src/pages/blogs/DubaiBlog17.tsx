@@ -85,7 +85,8 @@ const Table = ({ head, rows }: { head: string[]; rows: (string | React.ReactNode
   </div>
 );
 
-const linkClass = "text-sippy-gold underline hover:text-sippy-charcoal font-medium";
+//const linkClass = "text-sippy-gold underline hover:text-sippy-charcoal font-medium";
+const linkClass = "text-sippy-gold hover:underline hover:text-sippy-charcoal font-medium";
 
 // Table of contents
 const TOC = [

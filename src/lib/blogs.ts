@@ -304,6 +304,19 @@ const LOCAL_BLOGS: BlogPost[] = [
     published_at: "2026-11-20T10:00:00Z",
     updated_at: null,
   },
+    {
+    id: "18",
+    slug: "best-areas-to-invest-in-dubai-property-in-2026-which-location-should-you-choose",
+    title: "Best Areas to Invest in Dubai Property in 2026: Which Location Should You Choose?",
+    excerpt: "Explore the best areas to invest in Dubai property in 2026, compare Downtown, Dubai Marina, Business Bay, JVC, Dubai Hills, Palm Jumeirah and Creek Harbour, and learn what to check before buying.",
+    cover_image: "/blogimg18.jpeg",
+    category: "Dubai Real Estate",
+    author: "Sippy Housing",
+    tags: ["Best Areas to Invest in Dubai", "Dubai Real Estate", "Downtown Dubai", "Dubai Marina", "Business Bay", "JVC", "Dubai Hills Estate", "Palm Jumeirah", "Dubai Creek Harbour", "2026"],
+    read_time: 10,
+    published_at: "2026-11-21T10:00:00Z",
+    updated_at: null,
+  },
   // Naya blog jodna ho toh bas yahan niche ek aur object copy-paste kar dein!
 ];
 

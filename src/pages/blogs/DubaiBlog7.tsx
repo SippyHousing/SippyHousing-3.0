@@ -55,7 +55,8 @@ const Table = ({ head, rows }: { head: string[]; rows: (React.ReactNode | string
   </div>
 );
 
-const linkClass = "text-sippy-gold underline hover:text-sippy-charcoal";
+//const linkClass = "text-sippy-gold underline hover:text-sippy-charcoal";
+const linkClass = "text-sippy-gold hover:underline hover:text-sippy-charcoal font-medium";
 
 // Table of contents (labels must match the <H2> / <H3> text exactly)
 const TOC: { label: string; sub?: boolean }[] = [
